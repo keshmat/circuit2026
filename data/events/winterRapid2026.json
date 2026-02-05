@@ -23,8 +23,8 @@
       "circuit_points": {
         "placement": 70,
         "performance_bonus": 10,
-        "participation": 3,
-        "total": 83,
+        "participation": 10,
+        "total": 90,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 5%"
@@ -44,8 +44,8 @@
       "circuit_points": {
         "placement": 57,
         "performance_bonus": 0,
-        "participation": 3,
-        "total": 60,
+        "participation": 10,
+        "total": 67,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 10%"
@@ -65,8 +65,8 @@
       "circuit_points": {
         "placement": 50,
         "performance_bonus": 0,
-        "participation": 3,
-        "total": 53,
+        "participation": 10,
+        "total": 60,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 20%"
@@ -86,8 +86,8 @@
       "circuit_points": {
         "placement": 31,
         "performance_bonus": 18,
-        "participation": 3,
-        "total": 52,
+        "participation": 10,
+        "total": 59,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Rest"
@@ -107,8 +107,8 @@
       "circuit_points": {
         "placement": 43,
         "performance_bonus": 2,
-        "participation": 3,
-        "total": 48,
+        "participation": 10,
+        "total": 55,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 20%"
@@ -128,8 +128,8 @@
       "circuit_points": {
         "placement": 43,
         "performance_bonus": 0,
-        "participation": 3,
-        "total": 46,
+        "participation": 10,
+        "total": 53,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 20%"
@@ -149,8 +149,8 @@
       "circuit_points": {
         "placement": 36,
         "performance_bonus": 4,
-        "participation": 3,
-        "total": 43,
+        "participation": 10,
+        "total": 50,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 33%"
@@ -170,8 +170,8 @@
       "circuit_points": {
         "placement": 36,
         "performance_bonus": 4,
-        "participation": 3,
-        "total": 43,
+        "participation": 10,
+        "total": 50,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 33%"
@@ -191,8 +191,8 @@
       "circuit_points": {
         "placement": 36,
         "performance_bonus": 4,
-        "participation": 3,
-        "total": 43,
+        "participation": 10,
+        "total": 50,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 50%"
@@ -212,32 +212,11 @@
       "circuit_points": {
         "placement": 31,
         "performance_bonus": 8,
-        "participation": 3,
-        "total": 42,
+        "participation": 10,
+        "total": 49,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 50%"
-      }
-    },
-    {
-      "seed_rank": 25,
-      "name": "Kaafarani Jad",
-      "title": "",
-      "rating": 0,
-      "federation": "LBN",
-      "points": 3.0,
-      "final_rank": 17,
-      "rounds_played": 7,
-      "total_rounds": 7,
-      "completed": true,
-      "circuit_points": {
-        "placement": 22,
-        "performance_bonus": 16,
-        "participation": 3,
-        "total": 41,
-        "eligible": true,
-        "eligibility_reason": null,
-        "percentile_band": "Rest"
       }
     },
     {
@@ -254,8 +233,8 @@
       "circuit_points": {
         "placement": 31,
         "performance_bonus": 6,
-        "participation": 3,
-        "total": 40,
+        "participation": 10,
+        "total": 47,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 50%"
@@ -275,8 +254,8 @@
       "circuit_points": {
         "placement": 36,
         "performance_bonus": 0,
-        "participation": 3,
-        "total": 39,
+        "participation": 10,
+        "total": 46,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 33%"
@@ -296,11 +275,32 @@
       "circuit_points": {
         "placement": 31,
         "performance_bonus": 4,
-        "participation": 3,
-        "total": 38,
+        "participation": 10,
+        "total": 45,
         "eligible": true,
         "eligibility_reason": null,
         "percentile_band": "Top 50%"
+      }
+    },
+    {
+      "seed_rank": 25,
+      "name": "Kaafarani Jad",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 17,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 15,
+        "performance_bonus": 16,
+        "participation": 10,
+        "total": 41,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
       }
     },
     {
@@ -315,9 +315,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 8,
-        "participation": 3,
+        "participation": 10,
         "total": 33,
         "eligible": true,
         "eligibility_reason": null,
@@ -336,9 +336,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 6,
-        "participation": 3,
+        "participation": 10,
         "total": 31,
         "eligible": true,
         "eligibility_reason": null,
@@ -357,9 +357,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 4,
-        "participation": 3,
+        "participation": 10,
         "total": 29,
         "eligible": true,
         "eligibility_reason": null,
@@ -378,9 +378,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 2,
-        "participation": 3,
+        "participation": 10,
         "total": 27,
         "eligible": true,
         "eligibility_reason": null,
@@ -399,9 +399,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 0,
-        "participation": 3,
+        "participation": 10,
         "total": 25,
         "eligible": true,
         "eligibility_reason": null,
@@ -420,9 +420,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 0,
-        "participation": 3,
+        "participation": 10,
         "total": 25,
         "eligible": true,
         "eligibility_reason": null,
@@ -441,9 +441,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 0,
-        "participation": 3,
+        "participation": 10,
         "total": 25,
         "eligible": true,
         "eligibility_reason": null,
@@ -462,9 +462,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 0,
-        "participation": 3,
+        "participation": 10,
         "total": 25,
         "eligible": true,
         "eligibility_reason": null,
@@ -483,9 +483,9 @@
       "total_rounds": 7,
       "completed": true,
       "circuit_points": {
-        "placement": 22,
+        "placement": 15,
         "performance_bonus": 0,
-        "participation": 3,
+        "participation": 10,
         "total": 25,
         "eligible": true,
         "eligibility_reason": null,
@@ -535,5 +535,5 @@
       }
     }
   ],
-  "processed_at": "2026-02-06T01:16:35.699553"
+  "processed_at": "2026-02-06T01:56:14.430394"
 }

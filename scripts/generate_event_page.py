@@ -117,7 +117,7 @@ EVENT_PAGE_TEMPLATE = '''<!DOCTYPE html>
                     <div class="card bg-base-200">
                         <div class="card-body py-4">
                             <h3 class="font-bold text-info">Participation</h3>
-                            <p class="text-sm text-base-content/70">+3 points for completing all rounds.</p>
+                            <p class="text-sm text-base-content/70">+10 points for completing all rounds (open events).</p>
                         </div>
                     </div>
                 </div>

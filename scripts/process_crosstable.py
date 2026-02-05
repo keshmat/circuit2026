@@ -30,7 +30,7 @@ PERCENTILE_BANDS_GROUP_C = [
     (0.20, 62),
     (0.33, 52),
     (0.50, 44),
-    (1.00, 32),
+    (1.00, 22),
 ]
 
 PERCENTILE_BANDS_RAPID = [
@@ -41,7 +41,7 @@ PERCENTILE_BANDS_RAPID = [
     (0.20, 43),
     (0.33, 36),
     (0.50, 31),
-    (1.00, 22),
+    (1.00, 15),
 ]
 
 # Performance bonus caps
@@ -56,8 +56,8 @@ PERFORMANCE_CAPS = {
 PARTICIPATION_POINTS = {
     "group_a": 5,
     "group_b": 5,
-    "group_c": 3,
-    "rapid": 3,
+    "group_c": 10,
+    "rapid": 10,
 }
 
 # Minimum completion ratio to be eligible for circuit points
@@ -305,22 +305,69 @@ def process_event(xlsx_path: str, event_type: str) -> dict:
     }
 
 
+def get_event_category(event_type: str) -> str:
+    """Determine if an event is Rapid or Classical."""
+    if event_type == "rapid":
+        return "rapid"
+    else:  # group_a, group_b, group_c are all Classical
+        return "classical"
+
+
+# Maximum number of events to count per category (rolling best-N)
+MAX_EVENTS_PER_CATEGORY = 3
+
+
+def calculate_best_n_points(events: list, max_events: int = MAX_EVENTS_PER_CATEGORY) -> tuple:
+    """
+    Calculate points using the best-N system.
+    Returns (total_points, events_with_counted_flag).
+    
+    Each event in the returned list will have a 'counted' field indicating
+    whether it's counted toward the total (True) or dropped (False).
+    """
+    # Sort events by points descending
+    sorted_events = sorted(events, key=lambda x: -x["points"])
+    
+    # Mark top N as counted, rest as dropped
+    events_with_status = []
+    total = 0
+    for i, event in enumerate(sorted_events):
+        counted = i < max_events
+        events_with_status.append({
+            **event,
+            "counted": counted,
+        })
+        if counted:
+            total += event["points"]
+    
+    return total, events_with_status
+
+
 def update_standings(data_dir: str) -> dict:
-    """Aggregate all event results into overall standings."""
+    """
+    Aggregate all event results into overall standings.
+    
+    Uses a rolling best-3 system: for each player, only their top 3 Rapid 
+    scores and top 3 Classical scores are counted toward the circuit total.
+    """
     events_dir = Path(data_dir) / "events"
     if not events_dir.exists():
         return {"players": [], "events": []}
     
     # Load all event files
     all_events = []
-    player_points = {}  # name -> list of (event_id, points)
+    player_data = {}  # name -> player info with categorized events
     
     for event_file in events_dir.glob("*.json"):
         with open(event_file) as f:
             event = json.load(f)
+            event_type = event["event_type"]
+            category = get_event_category(event_type)
+            
             all_events.append({
                 "event_id": event["event_id"],
-                "event_type": event["event_type"],
+                "event_type": event_type,
+                "category": category,
                 "name": event["tournament"].get("name", event["event_id"]),
                 "date": event["tournament"].get("date", ""),
                 "total_players": event["total_players"],
@@ -328,33 +375,66 @@ def update_standings(data_dir: str) -> dict:
             
             for result in event["results"]:
                 name = result["name"]
-                if name not in player_points:
-                    player_points[name] = {
+                if name not in player_data:
+                    player_data[name] = {
                         "name": name,
                         "title": result.get("title", ""),
                         "rating": result.get("rating", 0),
                         "federation": result.get("federation", ""),
-                        "events": [],
-                        "total_points": 0,
+                        "rapid_events": [],
+                        "classical_events": [],
                     }
                 
                 # Update rating if higher (might have changed between events)
-                if result.get("rating", 0) > player_points[name]["rating"]:
-                    player_points[name]["rating"] = result["rating"]
+                if result.get("rating", 0) > player_data[name]["rating"]:
+                    player_data[name]["rating"] = result["rating"]
                 
                 # Update title if present
-                if result.get("title") and not player_points[name]["title"]:
-                    player_points[name]["title"] = result["title"]
+                if result.get("title") and not player_data[name]["title"]:
+                    player_data[name]["title"] = result["title"]
                 
-                player_points[name]["events"].append({
+                event_entry = {
                     "event_id": event["event_id"],
+                    "event_type": event_type,
+                    "category": category,
                     "final_rank": result["final_rank"],
                     "points": result["circuit_points"]["total"],
-                })
-                player_points[name]["total_points"] += result["circuit_points"]["total"]
+                }
+                
+                # Add to appropriate category
+                if category == "rapid":
+                    player_data[name]["rapid_events"].append(event_entry)
+                else:
+                    player_data[name]["classical_events"].append(event_entry)
     
-    # Sort players by total points
-    standings = sorted(player_points.values(), key=lambda x: -x["total_points"])
+    # Calculate standings with best-3 system
+    standings = []
+    for name, data in player_data.items():
+        # Calculate best-3 for each category
+        rapid_total, rapid_events = calculate_best_n_points(data["rapid_events"])
+        classical_total, classical_events = calculate_best_n_points(data["classical_events"])
+        
+        # Combine all events (sorted by date/event_id for display)
+        all_player_events = rapid_events + classical_events
+        
+        # Count how many events are actually counted
+        counted_events = [e for e in all_player_events if e.get("counted", True)]
+        
+        standings.append({
+            "name": data["name"],
+            "title": data["title"],
+            "rating": data["rating"],
+            "federation": data["federation"],
+            "events": all_player_events,
+            "rapid_points": rapid_total,
+            "classical_points": classical_total,
+            "total_points": rapid_total + classical_total,
+            "events_counted": len(counted_events),
+            "events_total": len(all_player_events),
+        })
+    
+    # Sort players by total points (descending)
+    standings.sort(key=lambda x: -x["total_points"])
     
     # Add standing position
     for i, player in enumerate(standings, 1):

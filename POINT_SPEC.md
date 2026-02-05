@@ -92,7 +92,7 @@ Top 10%	72
 Top 20%	62
 Top 33%	52
 Top 50%	44
-Rest	32
+Rest	22
 
 Rapid (Open) — Percentile Bands
 
@@ -106,7 +106,7 @@ Top 10%	50
 Top 20%	43
 Top 33%	36
 Top 50%	31
-Rest	22
+Rest	15
 
 Band Rule Note (important):
 Percentile = FinalRank / N (1 is best). In implementation, use the ordered cutoffs (1%, 3%, 5%, 10%, 20%, 33%, 50%) and assign the first band that matches. Ties must be resolved by tournament tiebreaks before scoring.
@@ -129,7 +129,13 @@ Participation Points (all events)
 
 If Completed = Yes:
 	•	Group A / Group B: +5
-	•	Group C / Rapid: +3
+	•	Group C / Rapid: +10
 Otherwise: +0
+
+⸻
+
+Live Standings Note
+
+Season standings are updated after each event using a rolling best-3 system in each category: the leaderboard always counts a player's top 3 Rapid scores and top 3 Classical scores earned so far.
 
 ⸻

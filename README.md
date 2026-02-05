@@ -102,7 +102,7 @@ circuit2026/
 
 - **Placement Points**: Based on final standing (percentile bands for open events, fixed points for Groups A/B)
 - **Performance Bonus**: +2 points per position gained from seed rank (capped at +20/+25)
-- **Participation**: +3/+5 points for completing all rounds
+- **Participation**: +5/+10 points for completing all rounds (closed/open events)
 
 **Eligibility**: Players must complete at least 50% of rounds to receive any circuit points.
 

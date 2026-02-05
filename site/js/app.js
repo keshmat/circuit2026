@@ -74,13 +74,51 @@ async function loadJSON(path) {
     }
 }
 
+// Format points breakdown with rapid/classical split
+function formatPointsBreakdown(player) {
+    const rapidPts = player.rapid_points || 0;
+    const classicalPts = player.classical_points || 0;
+    
+    // Count events by category
+    const rapidEvents = (player.events || []).filter(e => e.category === 'rapid');
+    const classicalEvents = (player.events || []).filter(e => e.category === 'classical');
+    const rapidCounted = rapidEvents.filter(e => e.counted).length;
+    const classicalCounted = classicalEvents.filter(e => e.counted).length;
+    
+    let parts = [];
+    if (rapidPts > 0 || rapidEvents.length > 0) {
+        const droppedRapid = rapidEvents.length - rapidCounted;
+        const droppedNote = droppedRapid > 0 ? ` <span class="text-warning text-xs">(${droppedRapid} dropped)</span>` : '';
+        parts.push(`<span class="text-warning">${rapidPts}</span> R${droppedNote}`);
+    }
+    if (classicalPts > 0 || classicalEvents.length > 0) {
+        const droppedClassical = classicalEvents.length - classicalCounted;
+        const droppedNote = droppedClassical > 0 ? ` <span class="text-info text-xs">(${droppedClassical} dropped)</span>` : '';
+        parts.push(`<span class="text-info">${classicalPts}</span> C${droppedNote}`);
+    }
+    
+    if (parts.length === 0) return '-';
+    return parts.join(' + ');
+}
+
+// Format events count showing counted vs total
+function formatEventsCount(player) {
+    const total = player.events_total || player.events?.length || 0;
+    const counted = player.events_counted || total;
+    
+    if (total === counted) {
+        return `<span class="badge badge-ghost">${total}</span>`;
+    }
+    return `<span class="badge badge-ghost" title="${counted} of ${total} events counted">${counted}/${total}</span>`;
+}
+
 // Render standings table
 function renderStandings(data) {
     const tbody = document.getElementById('standings-body');
     if (!data || !data.standings || data.standings.length === 0) {
         tbody.innerHTML = `
             <tr>
-                <td colspan="5" class="text-center py-8 text-base-content/50">
+                <td colspan="6" class="text-center py-8 text-base-content/50">
                     No standings data available yet.
                 </td>
             </tr>
@@ -99,7 +137,10 @@ function renderStandings(data) {
             </td>
             <td class="text-center">${formatRating(player.rating)}</td>
             <td class="text-center">
-                <span class="badge badge-ghost">${player.events.length}</span>
+                ${formatEventsCount(player)}
+            </td>
+            <td class="text-center text-sm">
+                ${formatPointsBreakdown(player)}
             </td>
             <td class="text-center">
                 <span class="font-bold text-lg">${player.total_points}</span>

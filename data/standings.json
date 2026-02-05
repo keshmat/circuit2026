@@ -8,11 +8,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 1,
-          "points": 83
+          "points": 90,
+          "counted": true
         }
       ],
-      "total_points": 83,
+      "rapid_points": 90,
+      "classical_points": 0,
+      "total_points": 90,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 1
     },
     {
@@ -23,11 +30,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 2,
-          "points": 60
+          "points": 67,
+          "counted": true
         }
       ],
-      "total_points": 60,
+      "rapid_points": 67,
+      "classical_points": 0,
+      "total_points": 67,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 2
     },
     {
@@ -38,11 +52,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 3,
-          "points": 53
+          "points": 60,
+          "counted": true
         }
       ],
-      "total_points": 53,
+      "rapid_points": 60,
+      "classical_points": 0,
+      "total_points": 60,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 3
     },
     {
@@ -53,11 +74,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 13,
-          "points": 52
+          "points": 59,
+          "counted": true
         }
       ],
-      "total_points": 52,
+      "rapid_points": 59,
+      "classical_points": 0,
+      "total_points": 59,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 4
     },
     {
@@ -68,11 +96,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 4,
-          "points": 48
+          "points": 55,
+          "counted": true
         }
       ],
-      "total_points": 48,
+      "rapid_points": 55,
+      "classical_points": 0,
+      "total_points": 55,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 5
     },
     {
@@ -83,11 +118,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 5,
-          "points": 46
+          "points": 53,
+          "counted": true
         }
       ],
-      "total_points": 46,
+      "rapid_points": 53,
+      "classical_points": 0,
+      "total_points": 53,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 6
     },
     {
@@ -98,11 +140,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 6,
-          "points": 43
+          "points": 50,
+          "counted": true
         }
       ],
-      "total_points": 43,
+      "rapid_points": 50,
+      "classical_points": 0,
+      "total_points": 50,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 7
     },
     {
@@ -113,11 +162,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 7,
-          "points": 43
+          "points": 50,
+          "counted": true
         }
       ],
-      "total_points": 43,
+      "rapid_points": 50,
+      "classical_points": 0,
+      "total_points": 50,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 8
     },
     {
@@ -128,11 +184,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 9,
-          "points": 43
+          "points": 50,
+          "counted": true
         }
       ],
-      "total_points": 43,
+      "rapid_points": 50,
+      "classical_points": 0,
+      "total_points": 50,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 9
     },
     {
@@ -143,27 +206,19 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 10,
-          "points": 42
+          "points": 49,
+          "counted": true
         }
       ],
-      "total_points": 42,
+      "rapid_points": 49,
+      "classical_points": 0,
+      "total_points": 49,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 10
-    },
-    {
-      "name": "Kaafarani Jad",
-      "title": "",
-      "rating": 0,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "final_rank": 17,
-          "points": 41
-        }
-      ],
-      "total_points": 41,
-      "position": 11
     },
     {
       "name": "Khoury Rabih",
@@ -173,12 +228,19 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 12,
-          "points": 40
+          "points": 47,
+          "counted": true
         }
       ],
-      "total_points": 40,
-      "position": 12
+      "rapid_points": 47,
+      "classical_points": 0,
+      "total_points": 47,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 11
     },
     {
       "name": "Assaad Joe",
@@ -188,12 +250,19 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 8,
-          "points": 39
+          "points": 46,
+          "counted": true
         }
       ],
-      "total_points": 39,
-      "position": 13
+      "rapid_points": 46,
+      "classical_points": 0,
+      "total_points": 46,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 12
     },
     {
       "name": "Kaafarani Abbas",
@@ -203,11 +272,40 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 11,
-          "points": 38
+          "points": 45,
+          "counted": true
         }
       ],
-      "total_points": 38,
+      "rapid_points": 45,
+      "classical_points": 0,
+      "total_points": 45,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 13
+    },
+    {
+      "name": "Kaafarani Jad",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 17,
+          "points": 41,
+          "counted": true
+        }
+      ],
+      "rapid_points": 41,
+      "classical_points": 0,
+      "total_points": 41,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 14
     },
     {
@@ -218,11 +316,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 16,
-          "points": 33
+          "points": 33,
+          "counted": true
         }
       ],
+      "rapid_points": 33,
+      "classical_points": 0,
       "total_points": 33,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 15
     },
     {
@@ -233,11 +338,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 15,
-          "points": 31
+          "points": 31,
+          "counted": true
         }
       ],
+      "rapid_points": 31,
+      "classical_points": 0,
       "total_points": 31,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 16
     },
     {
@@ -248,11 +360,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 22,
-          "points": 29
+          "points": 29,
+          "counted": true
         }
       ],
+      "rapid_points": 29,
+      "classical_points": 0,
       "total_points": 29,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 17
     },
     {
@@ -263,11 +382,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 18,
-          "points": 27
+          "points": 27,
+          "counted": true
         }
       ],
+      "rapid_points": 27,
+      "classical_points": 0,
       "total_points": 27,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 18
     },
     {
@@ -278,11 +404,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 14,
-          "points": 25
+          "points": 25,
+          "counted": true
         }
       ],
+      "rapid_points": 25,
+      "classical_points": 0,
       "total_points": 25,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 19
     },
     {
@@ -293,11 +426,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 19,
-          "points": 25
+          "points": 25,
+          "counted": true
         }
       ],
+      "rapid_points": 25,
+      "classical_points": 0,
       "total_points": 25,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 20
     },
     {
@@ -308,11 +448,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 20,
-          "points": 25
+          "points": 25,
+          "counted": true
         }
       ],
+      "rapid_points": 25,
+      "classical_points": 0,
       "total_points": 25,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 21
     },
     {
@@ -323,11 +470,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 21,
-          "points": 25
+          "points": 25,
+          "counted": true
         }
       ],
+      "rapid_points": 25,
+      "classical_points": 0,
       "total_points": 25,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 22
     },
     {
@@ -338,11 +492,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 23,
-          "points": 25
+          "points": 25,
+          "counted": true
         }
       ],
+      "rapid_points": 25,
+      "classical_points": 0,
       "total_points": 25,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 23
     },
     {
@@ -353,11 +514,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 24,
-          "points": 0
+          "points": 0,
+          "counted": true
         }
       ],
+      "rapid_points": 0,
+      "classical_points": 0,
       "total_points": 0,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 24
     },
     {
@@ -368,11 +536,18 @@
       "events": [
         {
           "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
           "final_rank": 25,
-          "points": 0
+          "points": 0,
+          "counted": true
         }
       ],
+      "rapid_points": 0,
+      "classical_points": 0,
       "total_points": 0,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 25
     }
   ],
@@ -380,10 +555,11 @@
     {
       "event_id": "winterRapid2026",
       "event_type": "rapid",
+      "category": "rapid",
       "name": "Keshmat Winter Festival - Rapid -  2026",
       "date": "2026-02-05",
       "total_players": 25
     }
   ],
-  "updated_at": "2026-02-06T01:16:35.700535"
+  "updated_at": "2026-02-06T01:56:14.431346"
 }
