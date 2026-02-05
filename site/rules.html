@@ -140,7 +140,7 @@
                     <div>
                         <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
                             <span class="badge badge-error">Group A</span>
-                            Classical Finals (6 players)
+                            Classical Round Robin (6 players)
                         </h3>
                         <table class="table table-sm">
                             <thead>
@@ -327,6 +327,26 @@
             </div>
         </div>
 
+        <!-- Circuit Championship -->
+        <div class="card bg-warning/10 border border-warning shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl text-warning mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 00-.584.859 6.753 6.753 0 006.138 5.6 6.73 6.73 0 002.743 1.346A6.707 6.707 0 019.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 00-2.25 2.25c0 .414.336.75.75.75h15.19a.75.75 0 00.75-.75 2.25 2.25 0 00-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 01-1.112-3.173 6.73 6.73 0 002.743-1.347 6.753 6.753 0 006.139-5.6.75.75 0 00-.585-.858 47.077 47.077 0 00-3.07-.543V2.62a.75.75 0 00-.658-.744 49.22 49.22 0 00-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 00-.657.744z" clip-rule="evenodd" />
+                    </svg>
+                    Circuit Championship
+                </h2>
+                
+                <p class="text-lg">
+                    The <strong>Circuit Champion</strong> is determined by total points accumulated across all events throughout the season.
+                </p>
+                <p class="text-base-content/70 mt-2">
+                    Players earn circuit points from every tournament they participate in (Rapid, Group C, Group B, and Group A). 
+                    The top point earners at the end of the season win the circuit awards and championship trophy.
+                </p>
+            </div>
+        </div>
+
         <!-- Circuit Events -->
         <div class="card bg-base-100 shadow-xl mb-8">
             <div class="card-body">
@@ -371,11 +391,10 @@
                     </div>
                     <div class="card bg-base-200">
                         <div class="card-body">
-                            <h3 class="font-bold flex items-center gap-2"><span class="badge badge-error">Group A</span> Classical Finals</h3>
+                            <h3 class="font-bold flex items-center gap-2"><span class="badge badge-error">Group A</span> Classical Round Robin</h3>
                             <ul class="list-disc list-inside text-sm text-base-content/70">
                                 <li>6 players, 5-round RR</li>
-                                <li>Top-tier finals group</li>
-                                <li>Highest circuit points</li>
+                                <li>Qualified/selected players</li>
                             </ul>
                         </div>
                     </div>
@@ -415,7 +434,7 @@
 
         // Load events for nav
         (async function() {
-            const data = await loadJSON('../data/standings.json');
+            const data = await loadJSON('/data/standings.json');
             if (data && data.events) {
                 renderEventsNav(data.events);
             }
