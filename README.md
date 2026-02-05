@@ -138,6 +138,53 @@ Generate an HTML page for an event:
 python scripts/generate_event_page.py <event_id> [--data-dir data] [--site-dir site]
 ```
 
+## Deploying to Netlify
+
+### Option 1: Connect to Git Repository
+
+1. Push your project to GitHub, GitLab, or Bitbucket
+2. Log in to [Netlify](https://netlify.com)
+3. Click "Add new site" → "Import an existing project"
+4. Connect your repository
+5. Netlify will auto-detect the `netlify.toml` configuration
+6. Click "Deploy site"
+
+The site will automatically redeploy whenever you push changes.
+
+### Option 2: Manual Deploy
+
+1. Install Netlify CLI:
+   ```bash
+   npm install -g netlify-cli
+   ```
+
+2. Build and deploy:
+   ```bash
+   # Copy data into site folder (same as Netlify build command)
+   cp -r data site/
+   
+   # Deploy
+   netlify deploy --dir=site --prod
+   ```
+
+### Updating the Live Site
+
+After adding new events:
+
+1. Run the update script locally:
+   ```bash
+   ./scripts/update_circuit.sh
+   ```
+
+2. Commit and push the changes:
+   ```bash
+   git add data/ site/
+   git commit -m "Add new event results"
+   git push
+   ```
+
+Netlify will automatically rebuild and deploy.
+
 ## License
 
 Keshmat Chess Circuit 2026 - Dekweneh, Lebanon

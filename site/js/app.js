@@ -1,7 +1,8 @@
 // Keshmat Circuit 2026 - Frontend Application
 
 // Data path - can be overridden before loading this script
-var DATA_PATH = window.DATA_PATH || '../data';
+// Use /data for production (Netlify), ../data for local file serving
+var DATA_PATH = window.DATA_PATH || '/data';
 
 // Event type labels
 const EVENT_TYPE_LABELS = {

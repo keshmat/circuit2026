@@ -177,9 +177,6 @@ EVENT_PAGE_TEMPLATE = '''<!DOCTYPE html>
 
     <script src="../js/app.js"></script>
     <script>
-        // Override DATA_PATH for event pages
-        const DATA_PATH = '../../data';
-
         // Theme toggle
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;

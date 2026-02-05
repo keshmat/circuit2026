@@ -1,0 +1,31 @@
+# Netlify configuration
+
+[build]
+  # Build command - copies data into site folder
+  command = "cp -r data site/"
+  
+  # Directory to publish
+  publish = "site"
+
+# Redirects for clean URLs (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Headers for caching
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
