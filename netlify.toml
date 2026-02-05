@@ -7,13 +7,6 @@
   # Directory to publish
   publish = "site"
 
-# Redirects for clean URLs (optional)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
 # Headers for caching
 [[headers]]
   for = "/data/*"
