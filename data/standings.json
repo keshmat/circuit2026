@@ -1,0 +1,389 @@
+{
+  "standings": [
+    {
+      "name": "Hazimeh Ahmad Ali",
+      "title": "",
+      "rating": 2023,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 1,
+          "points": 83
+        }
+      ],
+      "total_points": 83,
+      "position": 1
+    },
+    {
+      "name": "Khoder Akram",
+      "title": "IM",
+      "rating": 2274,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 2,
+          "points": 60
+        }
+      ],
+      "total_points": 60,
+      "position": 2
+    },
+    {
+      "name": "Adeimi Michel",
+      "title": "CM",
+      "rating": 2211,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 3,
+          "points": 53
+        }
+      ],
+      "total_points": 53,
+      "position": 3
+    },
+    {
+      "name": "Kaafarani Majd",
+      "title": "",
+      "rating": 1403,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 13,
+          "points": 52
+        }
+      ],
+      "total_points": 52,
+      "position": 4
+    },
+    {
+      "name": "Kassar Bashar",
+      "title": "",
+      "rating": 2028,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 4,
+          "points": 48
+        }
+      ],
+      "total_points": 48,
+      "position": 5
+    },
+    {
+      "name": "Najjar Ahmad",
+      "title": "FM",
+      "rating": 2129,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 5,
+          "points": 46
+        }
+      ],
+      "total_points": 46,
+      "position": 6
+    },
+    {
+      "name": "Saadeddine Adam",
+      "title": "",
+      "rating": 1946,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 6,
+          "points": 43
+        }
+      ],
+      "total_points": 43,
+      "position": 7
+    },
+    {
+      "name": "Akl Jad Eli",
+      "title": "AFM",
+      "rating": 1854,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 7,
+          "points": 43
+        }
+      ],
+      "total_points": 43,
+      "position": 8
+    },
+    {
+      "name": "Saad Tarek",
+      "title": "",
+      "rating": 1787,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 9,
+          "points": 43
+        }
+      ],
+      "total_points": 43,
+      "position": 9
+    },
+    {
+      "name": "Younes Mohamad Hussein",
+      "title": "",
+      "rating": 1753,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 10,
+          "points": 42
+        }
+      ],
+      "total_points": 42,
+      "position": 10
+    },
+    {
+      "name": "Kaafarani Jad",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 17,
+          "points": 41
+        }
+      ],
+      "total_points": 41,
+      "position": 11
+    },
+    {
+      "name": "Khoury Rabih",
+      "title": "",
+      "rating": 1629,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 12,
+          "points": 40
+        }
+      ],
+      "total_points": 40,
+      "position": 12
+    },
+    {
+      "name": "Assaad Joe",
+      "title": "CM",
+      "rating": 2238,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 8,
+          "points": 39
+        }
+      ],
+      "total_points": 39,
+      "position": 13
+    },
+    {
+      "name": "Kaafarani Abbas",
+      "title": "",
+      "rating": 1774,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 11,
+          "points": 38
+        }
+      ],
+      "total_points": 38,
+      "position": 14
+    },
+    {
+      "name": "Kayem Assi",
+      "title": "",
+      "rating": 1479,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 16,
+          "points": 33
+        }
+      ],
+      "total_points": 33,
+      "position": 15
+    },
+    {
+      "name": "Kassar Paul",
+      "title": "",
+      "rating": 1544,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 15,
+          "points": 31
+        }
+      ],
+      "total_points": 31,
+      "position": 16
+    },
+    {
+      "name": "El Khatib Younis",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 22,
+          "points": 29
+        }
+      ],
+      "total_points": 29,
+      "position": 17
+    },
+    {
+      "name": "Chaaban Mohamad Dib Nidal",
+      "title": "",
+      "rating": 1541,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 18,
+          "points": 27
+        }
+      ],
+      "total_points": 27,
+      "position": 18
+    },
+    {
+      "name": "Haddad Peter",
+      "title": "",
+      "rating": 1819,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 14,
+          "points": 25
+        }
+      ],
+      "total_points": 25,
+      "position": 19
+    },
+    {
+      "name": "Fares Ali",
+      "title": "",
+      "rating": 1617,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 19,
+          "points": 25
+        }
+      ],
+      "total_points": 25,
+      "position": 20
+    },
+    {
+      "name": "Masri Ali Rida",
+      "title": "",
+      "rating": 1605,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 20,
+          "points": 25
+        }
+      ],
+      "total_points": 25,
+      "position": 21
+    },
+    {
+      "name": "Abou Jaoude Karim",
+      "title": "",
+      "rating": 1475,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 21,
+          "points": 25
+        }
+      ],
+      "total_points": 25,
+      "position": 22
+    },
+    {
+      "name": "Assaf Raja Thomas",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 23,
+          "points": 25
+        }
+      ],
+      "total_points": 25,
+      "position": 23
+    },
+    {
+      "name": "El Khoury Brayan",
+      "title": "",
+      "rating": 1961,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 24,
+          "points": 0
+        }
+      ],
+      "total_points": 0,
+      "position": 24
+    },
+    {
+      "name": "Wadih Michel",
+      "title": "",
+      "rating": 1786,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "final_rank": 25,
+          "points": 0
+        }
+      ],
+      "total_points": 0,
+      "position": 25
+    }
+  ],
+  "events": [
+    {
+      "event_id": "winterRapid2026",
+      "event_type": "rapid",
+      "name": "Keshmat Winter Festival - Rapid -  2026",
+      "date": "2026-02-05",
+      "total_players": 25
+    }
+  ],
+  "updated_at": "2026-02-06T01:16:35.700535"
+}

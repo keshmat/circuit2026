@@ -1,0 +1,539 @@
+{
+  "event_id": "winterRapid2026",
+  "event_type": "rapid",
+  "tournament": {
+    "name": "Keshmat Winter Festival - Rapid -  2026",
+    "location": "Keshmat Chess Center (Dekweneh)",
+    "rounds": 7,
+    "date": "2026-02-05"
+  },
+  "total_players": 25,
+  "results": [
+    {
+      "seed_rank": 6,
+      "name": "Hazimeh Ahmad Ali",
+      "title": "",
+      "rating": 2023,
+      "federation": "LBN",
+      "points": 7.0,
+      "final_rank": 1,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 70,
+        "performance_bonus": 10,
+        "participation": 3,
+        "total": 83,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 5%"
+      }
+    },
+    {
+      "seed_rank": 1,
+      "name": "Khoder Akram",
+      "title": "IM",
+      "rating": 2274,
+      "federation": "LBN",
+      "points": 5.5,
+      "final_rank": 2,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 57,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 60,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 10%"
+      }
+    },
+    {
+      "seed_rank": 3,
+      "name": "Adeimi Michel",
+      "title": "CM",
+      "rating": 2211,
+      "federation": "LBN",
+      "points": 5.0,
+      "final_rank": 3,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 50,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 53,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 20%"
+      }
+    },
+    {
+      "seed_rank": 22,
+      "name": "Kaafarani Majd",
+      "title": "",
+      "rating": 1403,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 13,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 31,
+        "performance_bonus": 18,
+        "participation": 3,
+        "total": 52,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 5,
+      "name": "Kassar Bashar",
+      "title": "",
+      "rating": 2028,
+      "federation": "LBN",
+      "points": 5.0,
+      "final_rank": 4,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 43,
+        "performance_bonus": 2,
+        "participation": 3,
+        "total": 48,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 20%"
+      }
+    },
+    {
+      "seed_rank": 4,
+      "name": "Najjar Ahmad",
+      "title": "FM",
+      "rating": 2129,
+      "federation": "LBN",
+      "points": 4.5,
+      "final_rank": 5,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 43,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 46,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 20%"
+      }
+    },
+    {
+      "seed_rank": 8,
+      "name": "Saadeddine Adam",
+      "title": "",
+      "rating": 1946,
+      "federation": "LBN",
+      "points": 4.5,
+      "final_rank": 6,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 36,
+        "performance_bonus": 4,
+        "participation": 3,
+        "total": 43,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 33%"
+      }
+    },
+    {
+      "seed_rank": 9,
+      "name": "Akl Jad Eli",
+      "title": "AFM",
+      "rating": 1854,
+      "federation": "LBN",
+      "points": 4.5,
+      "final_rank": 7,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 36,
+        "performance_bonus": 4,
+        "participation": 3,
+        "total": 43,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 33%"
+      }
+    },
+    {
+      "seed_rank": 11,
+      "name": "Saad Tarek",
+      "title": "",
+      "rating": 1787,
+      "federation": "LBN",
+      "points": 4.0,
+      "final_rank": 9,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 36,
+        "performance_bonus": 4,
+        "participation": 3,
+        "total": 43,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 50%"
+      }
+    },
+    {
+      "seed_rank": 14,
+      "name": "Younes Mohamad Hussein",
+      "title": "",
+      "rating": 1753,
+      "federation": "LBN",
+      "points": 4.0,
+      "final_rank": 10,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 31,
+        "performance_bonus": 8,
+        "participation": 3,
+        "total": 42,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 50%"
+      }
+    },
+    {
+      "seed_rank": 25,
+      "name": "Kaafarani Jad",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 17,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 16,
+        "participation": 3,
+        "total": 41,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 15,
+      "name": "Khoury Rabih",
+      "title": "",
+      "rating": 1629,
+      "federation": "LBN",
+      "points": 4.0,
+      "final_rank": 12,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 31,
+        "performance_bonus": 6,
+        "participation": 3,
+        "total": 40,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 50%"
+      }
+    },
+    {
+      "seed_rank": 2,
+      "name": "Assaad Joe",
+      "title": "CM",
+      "rating": 2238,
+      "federation": "LBN",
+      "points": 4.0,
+      "final_rank": 8,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 36,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 39,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 33%"
+      }
+    },
+    {
+      "seed_rank": 13,
+      "name": "Kaafarani Abbas",
+      "title": "",
+      "rating": 1774,
+      "federation": "LBN",
+      "points": 4.0,
+      "final_rank": 11,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 31,
+        "performance_bonus": 4,
+        "participation": 3,
+        "total": 38,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Top 50%"
+      }
+    },
+    {
+      "seed_rank": 20,
+      "name": "Kayem Assi",
+      "title": "",
+      "rating": 1479,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 16,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 8,
+        "participation": 3,
+        "total": 33,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 18,
+      "name": "Kassar Paul",
+      "title": "",
+      "rating": 1544,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 15,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 6,
+        "participation": 3,
+        "total": 31,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 24,
+      "name": "El Khatib Younis",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "points": 2.0,
+      "final_rank": 22,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 4,
+        "participation": 3,
+        "total": 29,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 19,
+      "name": "Chaaban Mohamad Dib Nidal",
+      "title": "",
+      "rating": 1541,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 18,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 2,
+        "participation": 3,
+        "total": 27,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 10,
+      "name": "Haddad Peter",
+      "title": "",
+      "rating": 1819,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 14,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 25,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 16,
+      "name": "Fares Ali",
+      "title": "",
+      "rating": 1617,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 19,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 25,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 17,
+      "name": "Masri Ali Rida",
+      "title": "",
+      "rating": 1605,
+      "federation": "LBN",
+      "points": 3.0,
+      "final_rank": 20,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 25,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 21,
+      "name": "Abou Jaoude Karim",
+      "title": "",
+      "rating": 1475,
+      "federation": "LBN",
+      "points": 2.0,
+      "final_rank": 21,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 25,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 23,
+      "name": "Assaf Raja Thomas",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "points": 1.0,
+      "final_rank": 23,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 22,
+        "performance_bonus": 0,
+        "participation": 3,
+        "total": 25,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 7,
+      "name": "El Khoury Brayan",
+      "title": "",
+      "rating": 1961,
+      "federation": "LBN",
+      "points": 0.0,
+      "final_rank": 24,
+      "rounds_played": 1,
+      "total_rounds": 7,
+      "completed": false,
+      "circuit_points": {
+        "placement": 0,
+        "performance_bonus": 0,
+        "participation": 0,
+        "total": 0,
+        "eligible": false,
+        "eligibility_reason": "Did not complete minimum rounds (1/7)",
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 12,
+      "name": "Wadih Michel",
+      "title": "",
+      "rating": 1786,
+      "federation": "LBN",
+      "points": 0.0,
+      "final_rank": 25,
+      "rounds_played": 2,
+      "total_rounds": 7,
+      "completed": false,
+      "circuit_points": {
+        "placement": 0,
+        "performance_bonus": 0,
+        "participation": 0,
+        "total": 0,
+        "eligible": false,
+        "eligibility_reason": "Did not complete minimum rounds (2/7)",
+        "percentile_band": "Rest"
+      }
+    }
+  ],
+  "processed_at": "2026-02-06T01:16:35.699553"
+}

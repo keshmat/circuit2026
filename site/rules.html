@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Rules - Keshmat Circuit 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .formula {
+            font-family: 'Courier New', monospace;
+            background: rgba(0,0,0,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-base-200">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg">
+        <div class="navbar-start">
+            <a href="index.html" class="btn btn-ghost text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                    <path d="M11.25 5.337c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.036 1.007-1.875 2.25-1.875S15 2.34 15 3.375c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959 0 .332.278.598.61.578 1.91-.114 3.79-.342 5.632-.676a.75.75 0 01.878.645 49.17 49.17 0 01.376 5.452.657.657 0 01-.66.664c-.354 0-.675-.186-.958-.401a1.647 1.647 0 00-1.003-.349c-1.035 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401.31 0 .557.262.534.571a48.774 48.774 0 01-.595 4.845.75.75 0 01-.61.61c-1.82.317-3.673.533-5.555.642a.58.58 0 01-.611-.581c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.035-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959a.641.641 0 01-.658.643 49.118 49.118 0 01-4.708-.36.75.75 0 01-.645-.878c.293-1.614.504-3.257.629-4.924A.53.53 0 005.337 15c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.036 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.369 0 .713.128 1.003.349.283.215.604.401.959.401a.656.656 0 00.659-.663 47.703 47.703 0 00-.31-4.82.75.75 0 01.83-.832c1.343.155 2.703.254 4.077.294a.64.64 0 00.657-.642z" />
+                </svg>
+                Keshmat Circuit 2026
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html">Standings</a></li>
+                <li>
+                    <details>
+                        <summary>Events</summary>
+                        <ul class="p-2 bg-base-100 rounded-box z-10 w-52" id="nav-events">
+                            <li><a href="#">Loading...</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="rules.html" class="font-semibold">Rules</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <label class="swap swap-rotate btn btn-ghost btn-circle">
+                <input type="checkbox" id="theme-toggle" />
+                <svg class="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+                <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+            </label>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero bg-base-100 py-8">
+        <div class="hero-content text-center">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl font-bold mb-4">Circuit Points System</h1>
+                <p class="text-base-content/70">How circuit points are calculated for the Keshmat Chess Circuit 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        
+        <!-- Total Points Formula -->
+        <div class="card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                    </svg>
+                    Total Points Formula
+                </h2>
+                
+                <div class="bg-base-200 p-6 rounded-lg text-center">
+                    <p class="formula text-lg">
+                        TotalPoints = PlacementPoints + PerformanceBonus + ParticipationPoints
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="text-center p-4 bg-primary/10 rounded-lg">
+                        <div class="text-3xl font-bold text-primary">Placement</div>
+                        <div class="text-sm text-base-content/70">Based on final standing</div>
+                    </div>
+                    <div class="text-center p-4 bg-success/10 rounded-lg">
+                        <div class="text-3xl font-bold text-success">+ Performance</div>
+                        <div class="text-sm text-base-content/70">Bonus for outperforming seed</div>
+                    </div>
+                    <div class="text-center p-4 bg-info/10 rounded-lg">
+                        <div class="text-3xl font-bold text-info">+ Participation</div>
+                        <div class="text-sm text-base-content/70">Bonus for completing all rounds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eligibility -->
+        <div class="card bg-error/10 border border-error shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl text-error mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
+                    </svg>
+                    Eligibility Requirement
+                </h2>
+                
+                <p class="text-lg">
+                    To receive circuit points, a player must <strong>complete at least 50% of the tournament rounds</strong>.
+                </p>
+                <p class="text-base-content/70 mt-2">
+                    Players who forfeit more than half of their games will receive <strong>0 circuit points</strong>.
+                    This rule ensures that only active participants are rewarded.
+                </p>
+                
+                <div class="alert mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span><strong>Example:</strong> In a 7-round event, you must play at least 4 rounds to be eligible for points.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placement Points -->
+        <div class="card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 00-.584.859 6.753 6.753 0 006.138 5.6 6.73 6.73 0 002.743 1.346A6.707 6.707 0 019.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 00-2.25 2.25c0 .414.336.75.75.75h15.19a.75.75 0 00.75-.75 2.25 2.25 0 00-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 01-1.112-3.173 6.73 6.73 0 002.743-1.347 6.753 6.753 0 006.139-5.6.75.75 0 00-.585-.858 47.077 47.077 0 00-3.07-.543V2.62a.75.75 0 00-.658-.744 49.22 49.22 0 00-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 00-.657.744z" clip-rule="evenodd" />
+                    </svg>
+                    Placement Points
+                </h2>
+
+                <p class="mb-6 text-base-content/70">
+                    Placement points are based on your final standing in the tournament. Different event types have different point scales.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Group A -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
+                            <span class="badge badge-error">Group A</span>
+                            Classical Finals (6 players)
+                        </h3>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr><th>Place</th><th>Points</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1st</td><td class="font-bold">125</td></tr>
+                                <tr><td>2nd</td><td class="font-bold">103</td></tr>
+                                <tr><td>3rd</td><td class="font-bold">85</td></tr>
+                                <tr><td>4th</td><td class="font-bold">70</td></tr>
+                                <tr><td>5th</td><td class="font-bold">55</td></tr>
+                                <tr><td>6th</td><td class="font-bold">43</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Group B -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
+                            <span class="badge badge-primary">Group B</span>
+                            Classical Round Robin (6 players)
+                        </h3>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr><th>Place</th><th>Points</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1st</td><td class="font-bold">110</td></tr>
+                                <tr><td>2nd</td><td class="font-bold">90</td></tr>
+                                <tr><td>3rd</td><td class="font-bold">75</td></tr>
+                                <tr><td>4th</td><td class="font-bold">62</td></tr>
+                                <tr><td>5th</td><td class="font-bold">48</td></tr>
+                                <tr><td>6th</td><td class="font-bold">37</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Group C -->
+                <div class="mt-6">
+                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
+                        <span class="badge badge-secondary">Group C</span>
+                        Open Classical Swiss (Percentile Bands)
+                    </h3>
+                    <p class="text-sm text-base-content/70 mb-2">
+                        For open events, points are based on percentile standing. Cutoff = ceil(percent x N).
+                    </p>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr><th>Standing Band</th><th>Points</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Top 1%</td><td class="font-bold">100</td></tr>
+                            <tr><td>Top 3%</td><td class="font-bold">90</td></tr>
+                            <tr><td>Top 5%</td><td class="font-bold">82</td></tr>
+                            <tr><td>Top 10%</td><td class="font-bold">72</td></tr>
+                            <tr><td>Top 20%</td><td class="font-bold">62</td></tr>
+                            <tr><td>Top 33%</td><td class="font-bold">52</td></tr>
+                            <tr><td>Top 50%</td><td class="font-bold">44</td></tr>
+                            <tr><td>Rest</td><td class="font-bold">32</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Rapid -->
+                <div class="mt-6">
+                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
+                        <span class="badge badge-warning">Rapid</span>
+                        Open Rapid (Percentile Bands)
+                    </h3>
+                    <p class="text-sm text-base-content/70 mb-2">
+                        Same percentile cutoff system as Group C, with lower point values.
+                    </p>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr><th>Standing Band</th><th>Points</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Top 1%</td><td class="font-bold">70</td></tr>
+                            <tr><td>Top 3%</td><td class="font-bold">63</td></tr>
+                            <tr><td>Top 5%</td><td class="font-bold">57</td></tr>
+                            <tr><td>Top 10%</td><td class="font-bold">50</td></tr>
+                            <tr><td>Top 20%</td><td class="font-bold">43</td></tr>
+                            <tr><td>Top 33%</td><td class="font-bold">36</td></tr>
+                            <tr><td>Top 50%</td><td class="font-bold">31</td></tr>
+                            <tr><td>Rest</td><td class="font-bold">22</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Bonus -->
+        <div class="card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl text-success mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                    </svg>
+                    Performance Bonus
+                </h2>
+
+                <p class="mb-4 text-base-content/70">
+                    Earn bonus points for finishing higher than your seed (starting rank based on rating).
+                </p>
+
+                <div class="bg-base-200 p-6 rounded-lg text-center mb-4">
+                    <p class="formula text-lg">
+                        PerformanceBonus = min( 2 x max(0, SeedRank - FinalRank), cap )
+                    </p>
+                </div>
+
+                <p class="mb-4">
+                    <strong>In simple terms:</strong> You get <span class="text-success font-bold">+2 points for each position you climbed</span> from your seed rank, up to a maximum cap.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Event Type</th>
+                                <th>Maximum Bonus Cap</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="badge badge-error">Group A</span></td><td>+20 points</td></tr>
+                            <tr><td><span class="badge badge-primary">Group B</span></td><td>+20 points</td></tr>
+                            <tr><td><span class="badge badge-secondary">Group C</span></td><td>+25 points</td></tr>
+                            <tr><td><span class="badge badge-warning">Rapid</span></td><td>+25 points</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-success mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <div>
+                        <div class="font-bold">Example</div>
+                        <div>If you're seeded 15th but finish 8th, you climbed 7 positions. Bonus = min(2 x 7, 25) = <strong>14 points</strong></div>
+                    </div>
+                </div>
+
+                <div class="alert mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span><strong>Note:</strong> If you finish at or below your seed rank, the performance bonus is 0.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Participation Points -->
+        <div class="card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl text-info mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+                    </svg>
+                    Participation Points
+                </h2>
+
+                <p class="mb-4 text-base-content/70">
+                    Bonus points awarded for completing all rounds of the tournament without forfeits.
+                </p>
+
+                <div class="overflow-x-auto">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Event Type</th>
+                                <th>Participation Bonus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="badge badge-error">Group A</span></td><td class="font-bold text-info">+5 points</td></tr>
+                            <tr><td><span class="badge badge-primary">Group B</span></td><td class="font-bold text-info">+5 points</td></tr>
+                            <tr><td><span class="badge badge-secondary">Group C</span></td><td class="font-bold text-info">+3 points</td></tr>
+                            <tr><td><span class="badge badge-warning">Rapid</span></td><td class="font-bold text-info">+3 points</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert mt-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>If you miss any round (forfeit), you receive <strong>0 participation points</strong>.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Circuit Events -->
+        <div class="card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+                        <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z" clip-rule="evenodd" />
+                    </svg>
+                    Circuit Events
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="card bg-base-200">
+                        <div class="card-body">
+                            <h3 class="font-bold flex items-center gap-2"><span class="badge badge-warning">Rapid</span> Open Rapid</h3>
+                            <ul class="list-disc list-inside text-sm text-base-content/70">
+                                <li>7-round Swiss</li>
+                                <li>Open entry</li>
+                                <li>Top 2 qualify for Group A</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card bg-base-200">
+                        <div class="card-body">
+                            <h3 class="font-bold flex items-center gap-2"><span class="badge badge-secondary">Group C</span> Open Classical</h3>
+                            <ul class="list-disc list-inside text-sm text-base-content/70">
+                                <li>5-round Swiss</li>
+                                <li>Open entry</li>
+                                <li>Winner qualifies for Group B</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card bg-base-200">
+                        <div class="card-body">
+                            <h3 class="font-bold flex items-center gap-2"><span class="badge badge-primary">Group B</span> Classical Round Robin</h3>
+                            <ul class="list-disc list-inside text-sm text-base-content/70">
+                                <li>6 players, 5-round RR</li>
+                                <li>Qualified/selected players</li>
+                                <li>Winner qualifies for Group A</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card bg-base-200">
+                        <div class="card-body">
+                            <h3 class="font-bold flex items-center gap-2"><span class="badge badge-error">Group A</span> Classical Finals</h3>
+                            <ul class="list-disc list-inside text-sm text-base-content/70">
+                                <li>6 players, 5-round RR</li>
+                                <li>Top-tier finals group</li>
+                                <li>Highest circuit points</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-8">
+        <aside>
+            <p>Keshmat Chess Circuit 2026 - Dekweneh, Lebanon</p>
+        </aside>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        if (localStorage.getItem('theme') === 'light') {
+            html.setAttribute('data-theme', 'light');
+            themeToggle.checked = true;
+        }
+        
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                html.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Load events for nav
+        (async function() {
+            const data = await loadJSON('../data/standings.json');
+            if (data && data.events) {
+                renderEventsNav(data.events);
+            }
+        })();
+    </script>
+</body>
+</html>
