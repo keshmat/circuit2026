@@ -240,7 +240,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
                     </svg>
-                    Performance Bonus
+                    Performance Bonus (Improvement Bonus)
                 </h2>
 
                 <p class="mb-4 text-base-content/70">
@@ -249,36 +249,57 @@
 
                 <div class="bg-base-200 p-6 rounded-lg text-center mb-4">
                     <p class="formula text-lg">
-                        PerformanceBonus = min( 2 x max(0, SeedRank - FinalRank), cap )
+                        RawBonus = 2 x max(0, SeedRank - FinalRank)
                     </p>
                 </div>
 
                 <p class="mb-4">
-                    <strong>In simple terms:</strong> You get <span class="text-success font-bold">+2 points for each position you climbed</span> from your seed rank, up to a maximum cap.
+                    <strong>In simple terms:</strong> You get <span class="text-success font-bold">+2 points for each position you climbed</span> from your seed rank, subject to caps.
                 </p>
 
-                <div class="overflow-x-auto">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Event Type</th>
-                                <th>Maximum Bonus Cap</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td><span class="badge badge-error">Group A</span></td><td>+20 points</td></tr>
-                            <tr><td><span class="badge badge-primary">Group B</span></td><td>+20 points</td></tr>
-                            <tr><td><span class="badge badge-secondary">Group C</span></td><td>+25 points</td></tr>
-                            <tr><td><span class="badge badge-warning">Rapid</span></td><td>+25 points</td></tr>
-                        </tbody>
-                    </table>
+                <!-- Open Events -->
+                <div class="bg-warning/10 p-4 rounded-lg mb-4">
+                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
+                        <span class="badge badge-warning">Rapid</span>
+                        <span class="badge badge-secondary">Group C</span>
+                        Open Events
+                    </h3>
+                    <div class="bg-base-200 p-4 rounded-lg text-center mb-3">
+                        <p class="formula">
+                            PerformanceBonus = min( RawBonus, 25, floor(0.5 x PlacementPoints) )
+                        </p>
+                    </div>
+                    <ul class="list-disc list-inside text-sm text-base-content/70">
+                        <li>Bonus is capped at <strong>25 points</strong></li>
+                        <li>Bonus can never exceed <strong>50% of your placement points</strong></li>
+                    </ul>
+                    <p class="text-sm text-base-content/70 mt-2">
+                        This ensures the bonus rewards improvement without overtaking top placement finishers.
+                    </p>
+                </div>
+
+                <!-- Round Robin Events -->
+                <div class="bg-primary/10 p-4 rounded-lg mb-4">
+                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
+                        <span class="badge badge-error">Group A</span>
+                        <span class="badge badge-primary">Group B</span>
+                        Round Robin Events
+                    </h3>
+                    <div class="bg-base-200 p-4 rounded-lg text-center mb-3">
+                        <p class="formula">
+                            PerformanceBonus = min( RawBonus, 20 )
+                        </p>
+                    </div>
+                    <p class="text-sm text-base-content/70">
+                        Simple fixed cap of <strong>20 points</strong> (no 50% placement cap needed for small 6-player RRs).
+                    </p>
                 </div>
 
                 <div class="alert alert-success mt-4">
                     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div>
-                        <div class="font-bold">Example</div>
-                        <div>If you're seeded 15th but finish 8th, you climbed 7 positions. Bonus = min(2 x 7, 25) = <strong>14 points</strong></div>
+                        <div class="font-bold">Example (Rapid)</div>
+                        <div>Seeded 22nd, finished 13th with 31 placement points. RawBonus = 2 x 9 = 18. But 50% of 31 = 15. So bonus = min(18, 25, 15) = <strong>15 points</strong></div>
                     </div>
                 </div>
 
@@ -303,21 +324,11 @@
                     Bonus points awarded for completing all rounds of the tournament without forfeits.
                 </p>
 
-                <div class="overflow-x-auto">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Event Type</th>
-                                <th>Participation Bonus</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td><span class="badge badge-error">Group A</span></td><td class="font-bold text-info">+5 points</td></tr>
-                            <tr><td><span class="badge badge-primary">Group B</span></td><td class="font-bold text-info">+5 points</td></tr>
-                            <tr><td><span class="badge badge-secondary">Group C</span></td><td class="font-bold text-info">+10 points</td></tr>
-                            <tr><td><span class="badge badge-warning">Rapid</span></td><td class="font-bold text-info">+10 points</td></tr>
-                        </tbody>
-                    </table>
+                <div class="bg-info/10 p-4 rounded-lg">
+                    <p class="text-lg text-center">
+                        <span class="font-bold text-info text-2xl">+5 points</span>
+                        <span class="text-base-content/70 block mt-1">for all events (Group A, B, C, and Rapid)</span>
+                    </p>
                 </div>
 
                 <div class="alert mt-4">
