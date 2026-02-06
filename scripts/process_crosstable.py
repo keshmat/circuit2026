@@ -52,12 +52,12 @@ PERFORMANCE_CAPS = {
     "rapid": 25,
 }
 
-# Participation points
+# Participation points (all events now +5)
 PARTICIPATION_POINTS = {
     "group_a": 5,
     "group_b": 5,
-    "group_c": 10,
-    "rapid": 10,
+    "group_c": 5,
+    "rapid": 5,
 }
 
 # Minimum completion ratio to be eligible for circuit points
@@ -205,25 +205,28 @@ def get_placement_points(event_type: str, final_rank: int, total_players: int) -
 
 
 def get_percentile_band(final_rank: int, total_players: int) -> str:
-    """Get the percentile band label for display."""
-    percentile = final_rank / total_players
+    """Get the percentile band label for display.
     
-    if percentile <= 0.01:
-        return "Top 1%"
-    elif percentile <= 0.03:
-        return "Top 3%"
-    elif percentile <= 0.05:
-        return "Top 5%"
-    elif percentile <= 0.10:
-        return "Top 10%"
-    elif percentile <= 0.20:
-        return "Top 20%"
-    elif percentile <= 0.33:
-        return "Top 33%"
-    elif percentile <= 0.50:
-        return "Top 50%"
-    else:
-        return "Rest"
+    Uses the same ceil-based cutoff logic as placement points calculation
+    to ensure the label matches the points awarded.
+    """
+    # Use the same cutoff logic as placement points: cutoff = ceil(percent * N)
+    bands = [
+        (0.01, "Top 1%"),
+        (0.03, "Top 3%"),
+        (0.05, "Top 5%"),
+        (0.10, "Top 10%"),
+        (0.20, "Top 20%"),
+        (0.33, "Top 33%"),
+        (0.50, "Top 50%"),
+    ]
+    
+    for percent, label in bands:
+        cutoff = math.ceil(percent * total_players)
+        if final_rank <= cutoff:
+            return label
+    
+    return "Rest"
 
 
 def calculate_circuit_points(player: dict, event_type: str, total_players: int) -> dict:
@@ -253,10 +256,20 @@ def calculate_circuit_points(player: dict, event_type: str, total_players: int) 
     # Placement points
     placement = get_placement_points(event_type, final_rank, total_players)
     
-    # Performance bonus: min(2 * max(0, SeedRank - FinalRank), cap)
+    # Performance bonus calculation
+    # RawBonus = 2 * max(0, SeedRank - FinalRank)
     improvement = max(0, seed_rank - final_rank)
-    cap = PERFORMANCE_CAPS[event_type]
-    performance_bonus = min(2 * improvement, cap)
+    raw_bonus = 2 * improvement
+    
+    # Apply caps based on event type
+    if event_type in ["rapid", "group_c"]:
+        # Open events: min(RawBonus, 25, floor(0.5 * PlacementPoints))
+        # Bonus capped at 25 AND cannot exceed 50% of placement points
+        placement_cap = math.floor(0.5 * placement)
+        performance_bonus = min(raw_bonus, 25, placement_cap)
+    else:
+        # Round Robin events (group_a, group_b): min(RawBonus, 20)
+        performance_bonus = min(raw_bonus, 20)
     
     # Participation points
     participation = PARTICIPATION_POINTS[event_type] if completed else 0

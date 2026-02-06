@@ -11,13 +11,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 1,
-          "points": 90,
+          "points": 85,
           "counted": true
         }
       ],
-      "rapid_points": 90,
+      "rapid_points": 85,
       "classical_points": 0,
-      "total_points": 90,
+      "total_points": 85,
       "events_counted": 1,
       "events_total": 1,
       "position": 1
@@ -33,13 +33,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 2,
-          "points": 67,
+          "points": 62,
           "counted": true
         }
       ],
-      "rapid_points": 67,
+      "rapid_points": 62,
       "classical_points": 0,
-      "total_points": 67,
+      "total_points": 62,
       "events_counted": 1,
       "events_total": 1,
       "position": 2
@@ -55,13 +55,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 3,
-          "points": 60,
+          "points": 55,
           "counted": true
         }
       ],
-      "rapid_points": 60,
+      "rapid_points": 55,
       "classical_points": 0,
-      "total_points": 60,
+      "total_points": 55,
       "events_counted": 1,
       "events_total": 1,
       "position": 3
@@ -77,13 +77,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 13,
-          "points": 59,
+          "points": 51,
           "counted": true
         }
       ],
-      "rapid_points": 59,
+      "rapid_points": 51,
       "classical_points": 0,
-      "total_points": 59,
+      "total_points": 51,
       "events_counted": 1,
       "events_total": 1,
       "position": 4
@@ -99,13 +99,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 4,
-          "points": 55,
+          "points": 50,
           "counted": true
         }
       ],
-      "rapid_points": 55,
+      "rapid_points": 50,
       "classical_points": 0,
-      "total_points": 55,
+      "total_points": 50,
       "events_counted": 1,
       "events_total": 1,
       "position": 5
@@ -121,13 +121,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 5,
-          "points": 53,
+          "points": 48,
           "counted": true
         }
       ],
-      "rapid_points": 53,
+      "rapid_points": 48,
       "classical_points": 0,
-      "total_points": 53,
+      "total_points": 48,
       "events_counted": 1,
       "events_total": 1,
       "position": 6
@@ -143,13 +143,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 6,
-          "points": 50,
+          "points": 45,
           "counted": true
         }
       ],
-      "rapid_points": 50,
+      "rapid_points": 45,
       "classical_points": 0,
-      "total_points": 50,
+      "total_points": 45,
       "events_counted": 1,
       "events_total": 1,
       "position": 7
@@ -165,13 +165,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 7,
-          "points": 50,
+          "points": 45,
           "counted": true
         }
       ],
-      "rapid_points": 50,
+      "rapid_points": 45,
       "classical_points": 0,
-      "total_points": 50,
+      "total_points": 45,
       "events_counted": 1,
       "events_total": 1,
       "position": 8
@@ -187,13 +187,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 9,
-          "points": 50,
+          "points": 45,
           "counted": true
         }
       ],
-      "rapid_points": 50,
+      "rapid_points": 45,
       "classical_points": 0,
-      "total_points": 50,
+      "total_points": 45,
       "events_counted": 1,
       "events_total": 1,
       "position": 9
@@ -209,13 +209,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 10,
-          "points": 49,
+          "points": 44,
           "counted": true
         }
       ],
-      "rapid_points": 49,
+      "rapid_points": 44,
       "classical_points": 0,
-      "total_points": 49,
+      "total_points": 44,
       "events_counted": 1,
       "events_total": 1,
       "position": 10
@@ -231,13 +231,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 12,
-          "points": 47,
+          "points": 42,
           "counted": true
         }
       ],
-      "rapid_points": 47,
+      "rapid_points": 42,
       "classical_points": 0,
-      "total_points": 47,
+      "total_points": 42,
       "events_counted": 1,
       "events_total": 1,
       "position": 11
@@ -253,13 +253,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 8,
-          "points": 46,
+          "points": 41,
           "counted": true
         }
       ],
-      "rapid_points": 46,
+      "rapid_points": 41,
       "classical_points": 0,
-      "total_points": 46,
+      "total_points": 41,
       "events_counted": 1,
       "events_total": 1,
       "position": 12
@@ -275,38 +275,16 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 11,
-          "points": 45,
+          "points": 40,
           "counted": true
         }
       ],
-      "rapid_points": 45,
+      "rapid_points": 40,
       "classical_points": 0,
-      "total_points": 45,
+      "total_points": 40,
       "events_counted": 1,
       "events_total": 1,
       "position": 13
-    },
-    {
-      "name": "Kaafarani Jad",
-      "title": "",
-      "rating": 0,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 17,
-          "points": 41,
-          "counted": true
-        }
-      ],
-      "rapid_points": 41,
-      "classical_points": 0,
-      "total_points": 41,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 14
     },
     {
       "name": "Kayem Assi",
@@ -319,13 +297,35 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 16,
-          "points": 33,
+          "points": 27,
           "counted": true
         }
       ],
-      "rapid_points": 33,
+      "rapid_points": 27,
       "classical_points": 0,
-      "total_points": 33,
+      "total_points": 27,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 14
+    },
+    {
+      "name": "Kaafarani Jad",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 17,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 27,
+      "classical_points": 0,
+      "total_points": 27,
       "events_counted": 1,
       "events_total": 1,
       "position": 15
@@ -341,13 +341,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 15,
-          "points": 31,
+          "points": 26,
           "counted": true
         }
       ],
-      "rapid_points": 31,
+      "rapid_points": 26,
       "classical_points": 0,
-      "total_points": 31,
+      "total_points": 26,
       "events_counted": 1,
       "events_total": 1,
       "position": 16
@@ -363,13 +363,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 22,
-          "points": 29,
+          "points": 24,
           "counted": true
         }
       ],
-      "rapid_points": 29,
+      "rapid_points": 24,
       "classical_points": 0,
-      "total_points": 29,
+      "total_points": 24,
       "events_counted": 1,
       "events_total": 1,
       "position": 17
@@ -385,13 +385,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 18,
-          "points": 27,
+          "points": 22,
           "counted": true
         }
       ],
-      "rapid_points": 27,
+      "rapid_points": 22,
       "classical_points": 0,
-      "total_points": 27,
+      "total_points": 22,
       "events_counted": 1,
       "events_total": 1,
       "position": 18
@@ -407,13 +407,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 14,
-          "points": 25,
+          "points": 20,
           "counted": true
         }
       ],
-      "rapid_points": 25,
+      "rapid_points": 20,
       "classical_points": 0,
-      "total_points": 25,
+      "total_points": 20,
       "events_counted": 1,
       "events_total": 1,
       "position": 19
@@ -429,13 +429,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 19,
-          "points": 25,
+          "points": 20,
           "counted": true
         }
       ],
-      "rapid_points": 25,
+      "rapid_points": 20,
       "classical_points": 0,
-      "total_points": 25,
+      "total_points": 20,
       "events_counted": 1,
       "events_total": 1,
       "position": 20
@@ -451,13 +451,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 20,
-          "points": 25,
+          "points": 20,
           "counted": true
         }
       ],
-      "rapid_points": 25,
+      "rapid_points": 20,
       "classical_points": 0,
-      "total_points": 25,
+      "total_points": 20,
       "events_counted": 1,
       "events_total": 1,
       "position": 21
@@ -473,13 +473,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 21,
-          "points": 25,
+          "points": 20,
           "counted": true
         }
       ],
-      "rapid_points": 25,
+      "rapid_points": 20,
       "classical_points": 0,
-      "total_points": 25,
+      "total_points": 20,
       "events_counted": 1,
       "events_total": 1,
       "position": 22
@@ -495,13 +495,13 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 23,
-          "points": 25,
+          "points": 20,
           "counted": true
         }
       ],
-      "rapid_points": 25,
+      "rapid_points": 20,
       "classical_points": 0,
-      "total_points": 25,
+      "total_points": 20,
       "events_counted": 1,
       "events_total": 1,
       "position": 23
@@ -561,5 +561,5 @@
       "total_players": 25
     }
   ],
-  "updated_at": "2026-02-06T01:56:14.431346"
+  "updated_at": "2026-02-06T02:49:07.257599"
 }

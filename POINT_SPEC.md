@@ -115,21 +115,36 @@ Percentile = FinalRank / N (1 is best). In implementation, use the ordered cutof
 
 Bonuses (added to Placement Points)
 
-Performance Bonus (all events)
+Performance Bonus (Improvement Bonus)
 
-PerformanceBonus = min( 2 × max(0, SeedRank − FinalRank), cap )
+Definition (all events):
 
-Caps:
-	•	Group A: cap +20
-	•	Group B: cap +20
-	•	Group C: cap +25
-	•	Rapid: cap +25
+RawBonus = 2 × max(0, SeedRank − FinalRank)
+	•	SeedRank = starting rank by rating within the event (1 = highest)
+	•	FinalRank = final standing after tiebreaks (1 = winner)
+
+Open Events (Rapid + Group C):
+
+To ensure the bonus rewards improvement without overtaking top placement, we apply two caps:
+
+PerformanceBonus = min( RawBonus, 25, floor(0.5 × PlacementPoints) )
+
+So in open events:
+	•	Bonus is capped at 25, and
+	•	Bonus can never exceed 50% of the player's placement points in that event.
+
+Round Robin Events (Group A + Group B):
+
+Because these are small 6-player RRs (limited rank movement), we use a simple fixed cap:
+
+PerformanceBonus = min( RawBonus, 20 )
+
+(No additional "50% of placement" cap is needed here; it would have negligible effect.)
 
 Participation Points (all events)
 
 If Completed = Yes:
-	•	Group A / Group B: +5
-	•	Group C / Rapid: +10
+	•	Group A / Group B / Group C / Rapid: +5
 Otherwise: +0
 
 ⸻

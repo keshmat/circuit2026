@@ -111,13 +111,13 @@ EVENT_PAGE_TEMPLATE = '''<!DOCTYPE html>
                     <div class="card bg-base-200">
                         <div class="card-body py-4">
                             <h3 class="font-bold text-success">Performance Bonus</h3>
-                            <p class="text-sm text-base-content/70">2 points per position gained (seed rank - final rank). Max +25 for Rapid.</p>
+                            <p class="text-sm text-base-content/70">2 points per position gained (seed - final rank). Open events: capped at 25 and 50% of placement. RR: capped at 20.</p>
                         </div>
                     </div>
                     <div class="card bg-base-200">
                         <div class="card-body py-4">
                             <h3 class="font-bold text-info">Participation</h3>
-                            <p class="text-sm text-base-content/70">+10 points for completing all rounds (open events).</p>
+                            <p class="text-sm text-base-content/70">+5 points for completing all rounds.</p>
                         </div>
                     </div>
                 </div>
