@@ -1,8 +1,8 @@
 # Netlify configuration
 
 [build]
-  # Build command - copies data into site folder
-  command = "cp -r data site/"
+  # Build command - copies data into site folder (removes existing first)
+  command = "rm -rf site/data && cp -r data site/"
   
   # Directory to publish
   publish = "site"
