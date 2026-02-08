@@ -175,7 +175,7 @@ EVENT_PAGE_TEMPLATE = '''<!DOCTYPE html>
         </aside>
     </footer>
 
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js?v=4"></script>
     <script>
         // Theme toggle
         const themeToggle = document.getElementById('theme-toggle');

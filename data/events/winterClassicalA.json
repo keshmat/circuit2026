@@ -1,0 +1,137 @@
+{
+  "event_id": "winterClassicalA",
+  "event_type": "group_a",
+  "tournament": {
+    "name": "Keshmat Winter Festival - Classic - 2026 - Group A"
+  },
+  "total_players": 6,
+  "results": [
+    {
+      "seed_rank": 1,
+      "name": "Khoder, Akram",
+      "title": "IM",
+      "rating": 2288,
+      "federation": "LBN",
+      "points": 5.0,
+      "final_rank": 1,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 125,
+        "performance_bonus": 0,
+        "participation": 5,
+        "total": 130,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 2,
+      "name": "Assaad, Joe",
+      "title": "CM",
+      "rating": 2162,
+      "federation": "LBN",
+      "points": 4.0,
+      "final_rank": 2,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 103,
+        "performance_bonus": 0,
+        "participation": 5,
+        "total": 108,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 4,
+      "name": "Adeimi, Michel",
+      "title": "CM",
+      "rating": 2081,
+      "federation": "LBN",
+      "points": 2.5,
+      "final_rank": 3,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 85,
+        "performance_bonus": 2,
+        "participation": 5,
+        "total": 92,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 3,
+      "name": "Najjar, Ahmad",
+      "title": "FM",
+      "rating": 2111,
+      "federation": "LBN",
+      "points": 2.0,
+      "final_rank": 4,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 70,
+        "performance_bonus": 0,
+        "participation": 5,
+        "total": 75,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 5,
+      "name": "El Khoury, Brayan",
+      "title": "",
+      "rating": 1987,
+      "federation": "LBN",
+      "points": 1.5,
+      "final_rank": 5,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 55,
+        "performance_bonus": 0,
+        "participation": 5,
+        "total": 60,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 6,
+      "name": "Hazimeh, Ahmad Ali",
+      "title": "",
+      "rating": 1963,
+      "federation": "LBN",
+      "points": 0.0,
+      "final_rank": 6,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 43,
+        "performance_bonus": 0,
+        "participation": 5,
+        "total": 48,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    }
+  ],
+  "processed_at": "2026-02-08T17:58:41.122741"
+}

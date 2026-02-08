@@ -92,16 +92,22 @@ def parse_crosstable(xlsx_path: str) -> dict:
             break
     
     # Find the actual data rows
-    # Look for row with "No." in first column
+    # Chess-Results has two formats: "Starting rank" (No.) and "Final Ranking" round-robin (Rk.)
     header_row = None
+    use_rk_format = False  # True when header has Rk. but no No. (seed_rank derived from rating)
     for idx, row in df.iterrows():
-        if str(row.iloc[0]).strip() == "No.":
+        first = str(row.iloc[0]).strip() if pd.notna(row.iloc[0]) else ""
+        if first == "No.":
             header_row = idx
             break
-    
+        if first == "Rk." and (pd.notna(row.iloc[2]) and str(row.iloc[2]).strip() == "Name"):
+            header_row = idx
+            use_rk_format = True
+            break
+
     if header_row is None:
-        raise ValueError("Could not find header row with 'No.' column")
-    
+        raise ValueError("Could not find header row with 'No.' or 'Rk.' column")
+
     # Extract column mapping
     header = df.iloc[header_row]
     columns = {}
@@ -115,58 +121,71 @@ def parse_crosstable(xlsx_path: str) -> dict:
             columns["rating"] = i
         elif col_str == "FED":
             columns["federation"] = i
-        elif col_str == "Pts.":
+        elif col_str == "Pts." or col_str == "Pts. ":
             columns["points"] = i
         elif col_str == "Rk.":
             columns["final_rank"] = i
-    
-    # Find round columns (they have pattern like "1.Rd", "2.Rd", etc.)
+
+    if "seed_rank" not in columns and use_rk_format:
+        columns["seed_rank"] = None  # will be derived from rating order
+
+    # Find round columns: "1.Rd", "2.Rd", ... (Swiss) or plain 1, 2, 3, ... (round-robin)
     round_cols = []
     for i, col in enumerate(header):
         col_str = str(col).strip() if pd.notna(col) else ""
         if re.match(r"\d+\.Rd", col_str):
             round_cols.append(i)
+        elif col_str.isdigit() and 1 <= int(col_str) <= 20:
+            round_cols.append(i)
     columns["rounds"] = round_cols
-    
+
     # Parse player data
     players = []
     data_start = header_row + 1
-    
+
     for idx in range(data_start, len(df)):
         row = df.iloc[idx]
-        
-        # Check if this is a valid player row (has a number in No. column)
-        seed_val = row.iloc[columns["seed_rank"]]
-        if pd.isna(seed_val) or not str(seed_val).strip().isdigit():
-            # Check if we've hit the end (footer)
+
+        # Valid player row: has numeric final rank (Rk.) or seed (No.)
+        first_val = row.iloc[columns["final_rank"]]
+        if pd.isna(first_val) or not str(first_val).strip().isdigit():
             if "chess-results" in str(row.iloc[0]).lower():
                 break
+            if "Final Ranking" in str(row.iloc[0]) or "You find all" in str(row.iloc[0]):
+                break
             continue
-        
-        seed_rank = int(seed_val)
+
+        final_rank = int(float(first_val))
         name = str(row.iloc[columns["name"]]).strip() if pd.notna(row.iloc[columns["name"]]) else ""
-        
+
         # Get title (column before name)
         title_col = columns["name"] - 1
-        title = str(row.iloc[title_col]).strip() if pd.notna(row.iloc[title_col]) and str(row.iloc[title_col]).strip() not in ["NaN", "nan", ""] else ""
-        
-        rating = int(row.iloc[columns["rating"]]) if pd.notna(row.iloc[columns["rating"]]) and str(row.iloc[columns["rating"]]).strip().isdigit() else 0
+        title = ""
+        if title_col >= 0:
+            t = row.iloc[title_col]
+            title = str(t).strip() if pd.notna(t) and str(t).strip() not in ["NaN", "nan", ""] else ""
+        rating = 0
+        rval = row.iloc[columns["rating"]]
+        if pd.notna(rval):
+            try:
+                rating = int(float(rval))
+            except (ValueError, TypeError):
+                pass
         federation = str(row.iloc[columns["federation"]]).strip() if pd.notna(row.iloc[columns["federation"]]) else ""
         points = float(row.iloc[columns["points"]]) if pd.notna(row.iloc[columns["points"]]) else 0
-        final_rank = int(row.iloc[columns["final_rank"]]) if pd.notna(row.iloc[columns["final_rank"]]) else 0
-        
-        # Check if player completed all rounds
+        seed_rank = int(seed_val) if (columns["seed_rank"] is not None and (seed_val := row.iloc[columns["seed_rank"]]) is not None and str(seed_val).strip().isdigit()) else None
+
+        # Check if player completed all rounds (round-robin: *, 1, 0, ½, +, - etc.)
+        # Count any non-empty result: 0 = loss, 1 = win, ½ = draw, * = bye (all count as round completed)
         rounds_played = 0
         total_rounds = len(round_cols)
         for rc in round_cols:
             rd_val = str(row.iloc[rc]).strip() if pd.notna(row.iloc[rc]) else ""
-            # A round is played if it has a result (not empty, not "0" which means unplayed/forfeit loss without showing up)
-            # Results can be: "13b1" (played, won), "8w0" (played, lost), "4b½" (draw), "-1" (forfeit win), "0" (forfeit loss/no show)
-            if rd_val and rd_val != "0":
+            if rd_val:
                 rounds_played += 1
-        
+
         completed = rounds_played >= total_rounds
-        
+
         players.append({
             "seed_rank": seed_rank,
             "name": name,
@@ -179,7 +198,14 @@ def parse_crosstable(xlsx_path: str) -> dict:
             "total_rounds": total_rounds,
             "completed": completed,
         })
-    
+
+    # Always derive seed_rank from rating order (1 = highest rating), not from crosstable No. column.
+    # Chess-Results starting rank can be wrong; we use the crosstable for rating data but rank by that.
+    if players:
+        by_rating = sorted(players, key=lambda p: (-p["rating"], p["name"]))
+        for rank, p in enumerate(by_rating, 1):
+            p["seed_rank"] = rank
+
     return {
         "tournament": tournament_info,
         "players": players,
@@ -326,6 +352,15 @@ def get_event_category(event_type: str) -> str:
         return "classical"
 
 
+def normalize_player_key(name: str) -> str:
+    """Normalize player name to a key for grouping across events.
+    Handles 'Last, First' vs 'First Last' variations (e.g. 'Saadeddine, Adam' vs 'Saadeddine Adam').
+    """
+    # Lowercase, remove comma, collapse spaces, strip
+    key = re.sub(r"\s+", " ", name.replace(",", " ").strip().lower())
+    return key
+
+
 # Maximum number of events to count per category (rolling best-N)
 MAX_EVENTS_PER_CATEGORY = 3
 
@@ -369,7 +404,7 @@ def update_standings(data_dir: str) -> dict:
     
     # Load all event files
     all_events = []
-    player_data = {}  # name -> player info with categorized events
+    player_data = {}  # normalized_key -> player info with categorized events
     
     for event_file in events_dir.glob("*.json"):
         with open(event_file) as f:
@@ -388,8 +423,9 @@ def update_standings(data_dir: str) -> dict:
             
             for result in event["results"]:
                 name = result["name"]
-                if name not in player_data:
-                    player_data[name] = {
+                key = normalize_player_key(name)
+                if key not in player_data:
+                    player_data[key] = {
                         "name": name,
                         "title": result.get("title", ""),
                         "rating": result.get("rating", 0),
@@ -397,14 +433,18 @@ def update_standings(data_dir: str) -> dict:
                         "rapid_events": [],
                         "classical_events": [],
                     }
+                else:
+                    # Prefer "Last, First" (FIDE-style) for display when we see it
+                    if "," in name and "," not in player_data[key]["name"]:
+                        player_data[key]["name"] = name
                 
                 # Update rating if higher (might have changed between events)
-                if result.get("rating", 0) > player_data[name]["rating"]:
-                    player_data[name]["rating"] = result["rating"]
+                if result.get("rating", 0) > player_data[key]["rating"]:
+                    player_data[key]["rating"] = result["rating"]
                 
                 # Update title if present
-                if result.get("title") and not player_data[name]["title"]:
-                    player_data[name]["title"] = result["title"]
+                if result.get("title") and not player_data[key]["title"]:
+                    player_data[key]["title"] = result["title"]
                 
                 event_entry = {
                     "event_id": event["event_id"],
@@ -416,9 +456,9 @@ def update_standings(data_dir: str) -> dict:
                 
                 # Add to appropriate category
                 if category == "rapid":
-                    player_data[name]["rapid_events"].append(event_entry)
+                    player_data[key]["rapid_events"].append(event_entry)
                 else:
-                    player_data[name]["classical_events"].append(event_entry)
+                    player_data[key]["classical_events"].append(event_entry)
     
     # Calculate standings with best-3 system
     standings = []

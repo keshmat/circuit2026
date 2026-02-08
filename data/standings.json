@@ -1,31 +1,9 @@
 {
   "standings": [
     {
-      "name": "Hazimeh Ahmad Ali",
-      "title": "",
-      "rating": 2023,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 1,
-          "points": 85,
-          "counted": true
-        }
-      ],
-      "rapid_points": 85,
-      "classical_points": 0,
-      "total_points": 85,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 1
-    },
-    {
-      "name": "Khoder Akram",
+      "name": "Khoder, Akram",
       "title": "IM",
-      "rating": 2274,
+      "rating": 2288,
       "federation": "LBN",
       "events": [
         {
@@ -35,105 +13,25 @@
           "final_rank": 2,
           "points": 62,
           "counted": true
+        },
+        {
+          "event_id": "winterClassicalA",
+          "event_type": "group_a",
+          "category": "classical",
+          "final_rank": 1,
+          "points": 130,
+          "counted": true
         }
       ],
       "rapid_points": 62,
-      "classical_points": 0,
-      "total_points": 62,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 2
+      "classical_points": 130,
+      "total_points": 192,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 1
     },
     {
-      "name": "Adeimi Michel",
-      "title": "CM",
-      "rating": 2211,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 3,
-          "points": 55,
-          "counted": true
-        }
-      ],
-      "rapid_points": 55,
-      "classical_points": 0,
-      "total_points": 55,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 3
-    },
-    {
-      "name": "Kaafarani Majd",
-      "title": "",
-      "rating": 1403,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 13,
-          "points": 51,
-          "counted": true
-        }
-      ],
-      "rapid_points": 51,
-      "classical_points": 0,
-      "total_points": 51,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 4
-    },
-    {
-      "name": "Kassar Bashar",
-      "title": "",
-      "rating": 2028,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 4,
-          "points": 50,
-          "counted": true
-        }
-      ],
-      "rapid_points": 50,
-      "classical_points": 0,
-      "total_points": 50,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 5
-    },
-    {
-      "name": "Najjar Ahmad",
-      "title": "FM",
-      "rating": 2129,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 5,
-          "points": 48,
-          "counted": true
-        }
-      ],
-      "rapid_points": 48,
-      "classical_points": 0,
-      "total_points": 48,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 6
-    },
-    {
-      "name": "Saadeddine Adam",
+      "name": "Saadeddine, Adam",
       "title": "",
       "rating": 1946,
       "federation": "LBN",
@@ -145,19 +43,177 @@
           "final_rank": 6,
           "points": 45,
           "counted": true
+        },
+        {
+          "event_id": "winterClassicalB",
+          "event_type": "group_b",
+          "category": "classical",
+          "final_rank": 1,
+          "points": 117,
+          "counted": true
         }
       ],
       "rapid_points": 45,
-      "classical_points": 0,
-      "total_points": 45,
-      "events_counted": 1,
-      "events_total": 1,
+      "classical_points": 117,
+      "total_points": 162,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 2
+    },
+    {
+      "name": "Assaad, Joe",
+      "title": "CM",
+      "rating": 2238,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 8,
+          "points": 41,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalA",
+          "event_type": "group_a",
+          "category": "classical",
+          "final_rank": 2,
+          "points": 108,
+          "counted": true
+        }
+      ],
+      "rapid_points": 41,
+      "classical_points": 108,
+      "total_points": 149,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 3
+    },
+    {
+      "name": "Haddad Peter",
+      "title": "",
+      "rating": 1819,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 14,
+          "points": 20,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 1,
+          "points": 129,
+          "counted": true
+        }
+      ],
+      "rapid_points": 20,
+      "classical_points": 129,
+      "total_points": 149,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 4
+    },
+    {
+      "name": "Adeimi, Michel",
+      "title": "CM",
+      "rating": 2211,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 3,
+          "points": 55,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalA",
+          "event_type": "group_a",
+          "category": "classical",
+          "final_rank": 3,
+          "points": 92,
+          "counted": true
+        }
+      ],
+      "rapid_points": 55,
+      "classical_points": 92,
+      "total_points": 147,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 5
+    },
+    {
+      "name": "Kassar, Bashar",
+      "title": "",
+      "rating": 2028,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 4,
+          "points": 50,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalB",
+          "event_type": "group_b",
+          "category": "classical",
+          "final_rank": 2,
+          "points": 97,
+          "counted": true
+        }
+      ],
+      "rapid_points": 50,
+      "classical_points": 97,
+      "total_points": 147,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 6
+    },
+    {
+      "name": "Hazimeh, Ahmad Ali",
+      "title": "",
+      "rating": 2023,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 1,
+          "points": 85,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalA",
+          "event_type": "group_a",
+          "category": "classical",
+          "final_rank": 6,
+          "points": 48,
+          "counted": true
+        }
+      ],
+      "rapid_points": 85,
+      "classical_points": 48,
+      "total_points": 133,
+      "events_counted": 2,
+      "events_total": 2,
       "position": 7
     },
     {
-      "name": "Akl Jad Eli",
+      "name": "Akl, Jad Eli",
       "title": "AFM",
-      "rating": 1854,
+      "rating": 1951,
       "federation": "LBN",
       "events": [
         {
@@ -167,14 +223,624 @@
           "final_rank": 7,
           "points": 45,
           "counted": true
+        },
+        {
+          "event_id": "winterClassicalB",
+          "event_type": "group_b",
+          "category": "classical",
+          "final_rank": 3,
+          "points": 80,
+          "counted": true
         }
       ],
       "rapid_points": 45,
-      "classical_points": 0,
-      "total_points": 45,
+      "classical_points": 80,
+      "total_points": 125,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 8
+    },
+    {
+      "name": "Najjar, Ahmad",
+      "title": "FM",
+      "rating": 2129,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 5,
+          "points": 48,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalA",
+          "event_type": "group_a",
+          "category": "classical",
+          "final_rank": 4,
+          "points": 75,
+          "counted": true
+        }
+      ],
+      "rapid_points": 48,
+      "classical_points": 75,
+      "total_points": 123,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 9
+    },
+    {
+      "name": "Kaafarani Majd",
+      "title": "",
+      "rating": 1564,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 13,
+          "points": 51,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 15,
+          "points": 49,
+          "counted": true
+        }
+      ],
+      "rapid_points": 51,
+      "classical_points": 49,
+      "total_points": 100,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 10
+    },
+    {
+      "name": "Abu Hjeili Karim",
+      "title": "",
+      "rating": 1670,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 2,
+          "points": 95,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 95,
+      "total_points": 95,
       "events_counted": 1,
       "events_total": 1,
-      "position": 8
+      "position": 11
+    },
+    {
+      "name": "Salameh Celio Wissam",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 4,
+          "points": 92,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 92,
+      "total_points": 92,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 12
+    },
+    {
+      "name": "Habanjar Mohammad",
+      "title": "",
+      "rating": 1489,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 5,
+          "points": 91,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 91,
+      "total_points": 91,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 13
+    },
+    {
+      "name": "Kaafarani Abbas",
+      "title": "",
+      "rating": 1774,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 11,
+          "points": 40,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 12,
+          "points": 49,
+          "counted": true
+        }
+      ],
+      "rapid_points": 40,
+      "classical_points": 49,
+      "total_points": 89,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 14
+    },
+    {
+      "name": "Wadih, Michel",
+      "title": "",
+      "rating": 1802,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 25,
+          "points": 20,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalB",
+          "event_type": "group_b",
+          "category": "classical",
+          "final_rank": 4,
+          "points": 69,
+          "counted": true
+        }
+      ],
+      "rapid_points": 20,
+      "classical_points": 69,
+      "total_points": 89,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 15
+    },
+    {
+      "name": "Kassar Paul",
+      "title": "",
+      "rating": 1585,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 15,
+          "points": 26,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 10,
+          "points": 59,
+          "counted": true
+        }
+      ],
+      "rapid_points": 26,
+      "classical_points": 59,
+      "total_points": 85,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 16
+    },
+    {
+      "name": "El Khoury, Brayan",
+      "title": "",
+      "rating": 1987,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 24,
+          "points": 20,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalA",
+          "event_type": "group_a",
+          "category": "classical",
+          "final_rank": 5,
+          "points": 60,
+          "counted": true
+        }
+      ],
+      "rapid_points": 20,
+      "classical_points": 60,
+      "total_points": 80,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 17
+    },
+    {
+      "name": "Diab Majd",
+      "title": "",
+      "rating": 1689,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 3,
+          "points": 79,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 79,
+      "total_points": 79,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 18
+    },
+    {
+      "name": "Masri Ali Rida",
+      "title": "",
+      "rating": 1605,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 20,
+          "points": 20,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 11,
+          "points": 59,
+          "counted": true
+        }
+      ],
+      "rapid_points": 20,
+      "classical_points": 59,
+      "total_points": 79,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 19
+    },
+    {
+      "name": "Younes Mohamad Hussein",
+      "title": "",
+      "rating": 1852,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 10,
+          "points": 44,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 24,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 44,
+      "classical_points": 27,
+      "total_points": 71,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 20
+    },
+    {
+      "name": "Bsat Kinana",
+      "title": "",
+      "rating": 1730,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 6,
+          "points": 67,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 67,
+      "total_points": 67,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 21
+    },
+    {
+      "name": "El Khoury Elias",
+      "title": "",
+      "rating": 1577,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 7,
+          "points": 67,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 67,
+      "total_points": 67,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 22
+    },
+    {
+      "name": "Kaafarani Jad",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 17,
+          "points": 27,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 19,
+          "points": 38,
+          "counted": true
+        }
+      ],
+      "rapid_points": 27,
+      "classical_points": 38,
+      "total_points": 65,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 23
+    },
+    {
+      "name": "Almawla Amin Souad",
+      "title": "",
+      "rating": 1471,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 13,
+          "points": 63,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 63,
+      "total_points": 63,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 24
+    },
+    {
+      "name": "Masri Mohamad",
+      "title": "",
+      "rating": 1458,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 14,
+          "points": 63,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 63,
+      "total_points": 63,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 25
+    },
+    {
+      "name": "Totonji Kamal",
+      "title": "",
+      "rating": 1653,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 8,
+          "points": 57,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 57,
+      "total_points": 57,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 26
+    },
+    {
+      "name": "El Khoury Alexander",
+      "title": "",
+      "rating": 1776,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 9,
+          "points": 57,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 57,
+      "total_points": 57,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 27
+    },
+    {
+      "name": "Salem, Ralph",
+      "title": "",
+      "rating": 1774,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalB",
+          "event_type": "group_b",
+          "category": "classical",
+          "final_rank": 5,
+          "points": 55,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 55,
+      "total_points": 55,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 28
+    },
+    {
+      "name": "Kayem Assi",
+      "title": "",
+      "rating": 1479,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 16,
+          "points": 27,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 27,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 27,
+      "classical_points": 27,
+      "total_points": 54,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 29
+    },
+    {
+      "name": "El Khatib Younis",
+      "title": "",
+      "rating": 1447,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 22,
+          "points": 24,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 30,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 24,
+      "classical_points": 27,
+      "total_points": 51,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 30
+    },
+    {
+      "name": "Assaf Raja Thomas",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterRapid2026",
+          "event_type": "rapid",
+          "category": "rapid",
+          "final_rank": 23,
+          "points": 20,
+          "counted": true
+        },
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 28,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 20,
+      "classical_points": 27,
+      "total_points": 47,
+      "events_counted": 2,
+      "events_total": 2,
+      "position": 31
     },
     {
       "name": "Saad Tarek",
@@ -196,29 +862,29 @@
       "total_points": 45,
       "events_counted": 1,
       "events_total": 1,
-      "position": 9
+      "position": 32
     },
     {
-      "name": "Younes Mohamad Hussein",
+      "name": "Farhat, Jawad",
       "title": "",
-      "rating": 1753,
+      "rating": 1886,
       "federation": "LBN",
       "events": [
         {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 10,
-          "points": 44,
+          "event_id": "winterClassicalB",
+          "event_type": "group_b",
+          "category": "classical",
+          "final_rank": 6,
+          "points": 42,
           "counted": true
         }
       ],
-      "rapid_points": 44,
-      "classical_points": 0,
-      "total_points": 44,
+      "rapid_points": 0,
+      "classical_points": 42,
+      "total_points": 42,
       "events_counted": 1,
       "events_total": 1,
-      "position": 10
+      "position": 33
     },
     {
       "name": "Khoury Rabih",
@@ -240,139 +906,227 @@
       "total_points": 42,
       "events_counted": 1,
       "events_total": 1,
-      "position": 11
+      "position": 34
     },
     {
-      "name": "Assaad Joe",
-      "title": "CM",
-      "rating": 2238,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 8,
-          "points": 41,
-          "counted": true
-        }
-      ],
-      "rapid_points": 41,
-      "classical_points": 0,
-      "total_points": 41,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 12
-    },
-    {
-      "name": "Kaafarani Abbas",
-      "title": "",
-      "rating": 1774,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 11,
-          "points": 40,
-          "counted": true
-        }
-      ],
-      "rapid_points": 40,
-      "classical_points": 0,
-      "total_points": 40,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 13
-    },
-    {
-      "name": "Kayem Assi",
-      "title": "",
-      "rating": 1479,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 16,
-          "points": 27,
-          "counted": true
-        }
-      ],
-      "rapid_points": 27,
-      "classical_points": 0,
-      "total_points": 27,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 14
-    },
-    {
-      "name": "Kaafarani Jad",
+      "name": "Kaafarani Mohamad Jawad",
       "title": "",
       "rating": 0,
       "federation": "LBN",
       "events": [
         {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 16,
+          "points": 38,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 38,
+      "total_points": 38,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 35
+    },
+    {
+      "name": "Younes Youssef",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 21,
+          "points": 38,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 38,
+      "total_points": 38,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 36
+    },
+    {
+      "name": "Farra Marc Anwar",
+      "title": "",
+      "rating": 1674,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
           "final_rank": 17,
           "points": 27,
           "counted": true
         }
       ],
-      "rapid_points": 27,
-      "classical_points": 0,
+      "rapid_points": 0,
+      "classical_points": 27,
       "total_points": 27,
       "events_counted": 1,
       "events_total": 1,
-      "position": 15
+      "position": 37
     },
     {
-      "name": "Kassar Paul",
+      "name": "Kobeissey Jessica",
       "title": "",
-      "rating": 1544,
+      "rating": 1594,
       "federation": "LBN",
       "events": [
         {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 15,
-          "points": 26,
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 18,
+          "points": 27,
           "counted": true
         }
       ],
-      "rapid_points": 26,
-      "classical_points": 0,
-      "total_points": 26,
+      "rapid_points": 0,
+      "classical_points": 27,
+      "total_points": 27,
       "events_counted": 1,
       "events_total": 1,
-      "position": 16
+      "position": 38
     },
     {
-      "name": "El Khatib Younis",
+      "name": "Almawla Amin Sara",
+      "title": "",
+      "rating": 1587,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 20,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 27,
+      "total_points": 27,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 39
+    },
+    {
+      "name": "Bader El Din Leen",
+      "title": "",
+      "rating": 1476,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 22,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 27,
+      "total_points": 27,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 40
+    },
+    {
+      "name": "Hamadani Hassan",
+      "title": "",
+      "rating": 1448,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 23,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 27,
+      "total_points": 27,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 41
+    },
+    {
+      "name": "Akiki Charbel",
       "title": "",
       "rating": 0,
       "federation": "LBN",
       "events": [
         {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 22,
-          "points": 24,
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 25,
+          "points": 27,
           "counted": true
         }
       ],
-      "rapid_points": 24,
-      "classical_points": 0,
-      "total_points": 24,
+      "rapid_points": 0,
+      "classical_points": 27,
+      "total_points": 27,
       "events_counted": 1,
       "events_total": 1,
-      "position": 17
+      "position": 42
+    },
+    {
+      "name": "Zeitjian Sarkis",
+      "title": "",
+      "rating": 1563,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 26,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 27,
+      "total_points": 27,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 43
+    },
+    {
+      "name": "Al-Moussawi Abbas",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 29,
+          "points": 27,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 27,
+      "total_points": 27,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 44
     },
     {
       "name": "Chaaban Mohamad Dib Nidal",
@@ -394,29 +1148,7 @@
       "total_points": 22,
       "events_counted": 1,
       "events_total": 1,
-      "position": 18
-    },
-    {
-      "name": "Haddad Peter",
-      "title": "",
-      "rating": 1819,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 14,
-          "points": 20,
-          "counted": true
-        }
-      ],
-      "rapid_points": 20,
-      "classical_points": 0,
-      "total_points": 20,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 19
+      "position": 45
     },
     {
       "name": "Fares Ali",
@@ -438,29 +1170,7 @@
       "total_points": 20,
       "events_counted": 1,
       "events_total": 1,
-      "position": 20
-    },
-    {
-      "name": "Masri Ali Rida",
-      "title": "",
-      "rating": 1605,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 20,
-          "points": 20,
-          "counted": true
-        }
-      ],
-      "rapid_points": 20,
-      "classical_points": 0,
-      "total_points": 20,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 21
+      "position": 46
     },
     {
       "name": "Abou Jaoude Karim",
@@ -482,73 +1192,7 @@
       "total_points": 20,
       "events_counted": 1,
       "events_total": 1,
-      "position": 22
-    },
-    {
-      "name": "Assaf Raja Thomas",
-      "title": "",
-      "rating": 0,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 23,
-          "points": 20,
-          "counted": true
-        }
-      ],
-      "rapid_points": 20,
-      "classical_points": 0,
-      "total_points": 20,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 23
-    },
-    {
-      "name": "El Khoury Brayan",
-      "title": "",
-      "rating": 1961,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 24,
-          "points": 0,
-          "counted": true
-        }
-      ],
-      "rapid_points": 0,
-      "classical_points": 0,
-      "total_points": 0,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 24
-    },
-    {
-      "name": "Wadih Michel",
-      "title": "",
-      "rating": 1786,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterRapid2026",
-          "event_type": "rapid",
-          "category": "rapid",
-          "final_rank": 25,
-          "points": 0,
-          "counted": true
-        }
-      ],
-      "rapid_points": 0,
-      "classical_points": 0,
-      "total_points": 0,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 25
+      "position": 47
     }
   ],
   "events": [
@@ -559,7 +1203,31 @@
       "name": "Keshmat Winter Festival - Rapid -  2026",
       "date": "2026-02-05",
       "total_players": 25
+    },
+    {
+      "event_id": "winterClassicalA",
+      "event_type": "group_a",
+      "category": "classical",
+      "name": "Keshmat Winter Festival - Classic - 2026 - Group A",
+      "date": "",
+      "total_players": 6
+    },
+    {
+      "event_id": "winterClassicalC",
+      "event_type": "group_c",
+      "category": "classical",
+      "name": "Keshmat Winter Festival - Classic - Open -  2026",
+      "date": "",
+      "total_players": 30
+    },
+    {
+      "event_id": "winterClassicalB",
+      "event_type": "group_b",
+      "category": "classical",
+      "name": "Keshmat Winter Festival - Classic - 2026 - Group B",
+      "date": "",
+      "total_players": 6
     }
   ],
-  "updated_at": "2026-02-06T02:49:07.257599"
+  "updated_at": "2026-02-08T18:09:11.793985"
 }

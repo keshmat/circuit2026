@@ -4,6 +4,11 @@
 // Use /data for production (Netlify), ../data for local file serving
 var DATA_PATH = window.DATA_PATH || '/data';
 
+// Event page link base: always use absolute path so links work from any page
+function getEventsLinkBase() {
+    return '/events/';
+}
+
 // Event type labels
 const EVENT_TYPE_LABELS = {
     'rapid': 'Rapid',
@@ -49,10 +54,10 @@ function formatPosition(pos) {
 function formatDate(dateStr) {
     if (!dateStr) return '';
     const date = new Date(dateStr);
-    return date.toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
     });
 }
 
@@ -62,10 +67,10 @@ function formatRating(rating) {
     return rating;
 }
 
-// Load JSON data
+// Load JSON data (no-store to avoid stale standings/event data after updates)
 async function loadJSON(path) {
     try {
-        const response = await fetch(path);
+        const response = await fetch(path, { cache: 'no-store' });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return await response.json();
     } catch (error) {
@@ -78,13 +83,13 @@ async function loadJSON(path) {
 function formatPointsBreakdown(player) {
     const rapidPts = player.rapid_points || 0;
     const classicalPts = player.classical_points || 0;
-    
+
     // Count events by category
     const rapidEvents = (player.events || []).filter(e => e.category === 'rapid');
     const classicalEvents = (player.events || []).filter(e => e.category === 'classical');
     const rapidCounted = rapidEvents.filter(e => e.counted).length;
     const classicalCounted = classicalEvents.filter(e => e.counted).length;
-    
+
     let parts = [];
     if (rapidPts > 0 || rapidEvents.length > 0) {
         const droppedRapid = rapidEvents.length - rapidCounted;
@@ -96,7 +101,7 @@ function formatPointsBreakdown(player) {
         const droppedNote = droppedClassical > 0 ? ` <span class="text-info text-xs">(${droppedClassical} dropped)</span>` : '';
         parts.push(`<span class="text-info">${classicalPts}</span> C${droppedNote}`);
     }
-    
+
     if (parts.length === 0) return '-';
     return parts.join(' + ');
 }
@@ -105,7 +110,7 @@ function formatPointsBreakdown(player) {
 function formatEventsCount(player) {
     const total = player.events_total || player.events?.length || 0;
     const counted = player.events_counted || total;
-    
+
     if (total === counted) {
         return `<span class="badge badge-ghost">${total}</span>`;
     }
@@ -154,8 +159,9 @@ function renderEventsNav(events) {
     const nav = document.getElementById('nav-events');
     if (!nav || !events || events.length === 0) return;
 
+    const base = getEventsLinkBase();
     nav.innerHTML = events.map(event => `
-        <li><a href="events/${event.event_id}.html">${event.name || event.event_id}</a></li>
+        <li><a href="${base}${event.event_id}.html">${event.name || event.event_id}</a></li>
     `).join('');
 }
 
@@ -173,8 +179,9 @@ function renderEventsGrid(events) {
         return;
     }
 
+    const base = getEventsLinkBase();
     grid.innerHTML = events.map(event => `
-        <a href="events/${event.event_id}.html" class="card bg-base-200 hover:bg-base-300 transition-colors cursor-pointer">
+        <a href="${base}${event.event_id}.html" class="card bg-base-200 hover:bg-base-300 transition-colors cursor-pointer">
             <div class="card-body">
                 <div class="flex justify-between items-start">
                     <span class="badge ${EVENT_TYPE_BADGES[event.event_type] || 'badge-ghost'}">${EVENT_TYPE_LABELS[event.event_type] || event.event_type}</span>
@@ -266,7 +273,7 @@ function renderEventResults(data) {
             const eligible = isPlayerEligible(player);
             const rowClass = eligible ? 'hover' : 'opacity-50';
             const ineligibleBadge = !eligible ? '<span class="badge badge-error badge-sm ml-1">Ineligible</span>' : '';
-            
+
             return `
                 <tr class="${rowClass}">
                     <td class="text-center font-bold">${formatPosition(player.final_rank)}</td>

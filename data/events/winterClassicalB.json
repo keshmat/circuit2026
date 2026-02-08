@@ -1,0 +1,137 @@
+{
+  "event_id": "winterClassicalB",
+  "event_type": "group_b",
+  "tournament": {
+    "name": "Keshmat Winter Festival - Classic - 2026 - Group B"
+  },
+  "total_players": 6,
+  "results": [
+    {
+      "seed_rank": 2,
+      "name": "Saadeddine, Adam",
+      "title": "",
+      "rating": 1930,
+      "federation": "LBN",
+      "points": 4.5,
+      "final_rank": 1,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 110,
+        "performance_bonus": 2,
+        "participation": 5,
+        "total": 117,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 3,
+      "name": "Kassar, Bashar",
+      "title": "",
+      "rating": 1894,
+      "federation": "LBN",
+      "points": 3.5,
+      "final_rank": 2,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 90,
+        "performance_bonus": 2,
+        "participation": 5,
+        "total": 97,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 1,
+      "name": "Akl, Jad Eli",
+      "title": "AFM",
+      "rating": 1951,
+      "federation": "LBN",
+      "points": 3.5,
+      "final_rank": 3,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 75,
+        "performance_bonus": 0,
+        "participation": 5,
+        "total": 80,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 5,
+      "name": "Wadih, Michel",
+      "title": "",
+      "rating": 1802,
+      "federation": "LBN",
+      "points": 2.0,
+      "final_rank": 4,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 62,
+        "performance_bonus": 2,
+        "participation": 5,
+        "total": 69,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 6,
+      "name": "Salem, Ralph",
+      "title": "",
+      "rating": 1774,
+      "federation": "LBN",
+      "points": 1.0,
+      "final_rank": 5,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 48,
+        "performance_bonus": 2,
+        "participation": 5,
+        "total": 55,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    },
+    {
+      "seed_rank": 4,
+      "name": "Farhat, Jawad",
+      "title": "",
+      "rating": 1886,
+      "federation": "LBN",
+      "points": 0.5,
+      "final_rank": 6,
+      "rounds_played": 6,
+      "total_rounds": 6,
+      "completed": true,
+      "circuit_points": {
+        "placement": 37,
+        "performance_bonus": 0,
+        "participation": 5,
+        "total": 42,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": null
+      }
+    }
+  ],
+  "processed_at": "2026-02-08T17:58:40.868136"
+}

@@ -4,6 +4,21 @@
       "file": "winterRapid2026.xlsx",
       "type": "rapid",
       "name": "Winter Rapid 2026"
+    },
+    {
+      "file": "winterClassicalA.xlsx",
+      "type": "group_a",
+      "name": "Winter Classical Group A"
+    },
+    {
+      "file": "winterClassicalB.xlsx",
+      "type": "group_b",
+      "name": "Winter Classical Group B"
+    },
+    {
+      "file": "winterClassicalC.xlsx",
+      "type": "group_c",
+      "name": "Winter Classical Group C (Open)"
     }
   ]
 }
