@@ -356,11 +356,20 @@ form.addEventListener("submit", (e) => {
     const container = document.getElementById("venue-map");
     if (!container || !window.maplibregl) return;
     try {
+        // Render Arabic (RTL) place labels correctly. Load once, lazily.
+        if (maplibregl.getRTLTextPluginStatus &&
+            maplibregl.getRTLTextPluginStatus() === "unavailable") {
+            maplibregl.setRTLTextPlugin(
+                "https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.js",
+                null,
+                true // lazy: load when RTL text is first encountered
+            );
+        }
         const map = new maplibregl.Map({
             container: "venue-map",
             style: "https://tiles.openfreemap.org/styles/liberty",
             center: [VENUE.lng, VENUE.lat],
-            zoom: 15,
+            zoom: 11,
             cooperativeGestures: true,
             attributionControl: { compact: true },
         });
