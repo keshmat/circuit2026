@@ -123,6 +123,12 @@ RawBonus = 2 × max(0, SeedRank − FinalRank)
 	•	SeedRank = starting rank by rating within the event (1 = highest)
 	•	FinalRank = final standing after tiebreaks (1 = winner)
 
+SeedRank tie rule: seeds use competition ranking ("1224") by rating — players with equal
+ratings share the same seed, the best rank of their tie group. All unrated players
+(treated as rating 0) therefore share one seed, immediately below the lowest-rated
+player, and earn a performance bonus only by finishing ahead of rated players.
+Ties are never broken alphabetically.
+
 Open Events (Rapid + Group C):
 
 To ensure the bonus rewards improvement without overtaking top placement, we apply two caps:

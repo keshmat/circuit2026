@@ -201,10 +201,15 @@ def parse_crosstable(xlsx_path: str) -> dict:
 
     # Always derive seed_rank from rating order (1 = highest rating), not from crosstable No. column.
     # Chess-Results starting rank can be wrong; we use the crosstable for rating data but rank by that.
+    # Competition ranking ("1224"): players with equal ratings share the best rank of their tie
+    # group, so ties (notably all unrated players at rating 0) are never broken alphabetically.
     if players:
-        by_rating = sorted(players, key=lambda p: (-p["rating"], p["name"]))
-        for rank, p in enumerate(by_rating, 1):
-            p["seed_rank"] = rank
+        by_rating = sorted(players, key=lambda p: -p["rating"])
+        for i, p in enumerate(by_rating, 1):
+            if i > 1 and p["rating"] == by_rating[i - 2]["rating"]:
+                p["seed_rank"] = by_rating[i - 2]["seed_rank"]
+            else:
+                p["seed_rank"] = i
 
     return {
         "tournament": tournament_info,

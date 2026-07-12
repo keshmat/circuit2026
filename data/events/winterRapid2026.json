@@ -304,7 +304,7 @@
       }
     },
     {
-      "seed_rank": 25,
+      "seed_rank": 23,
       "name": "Kaafarani Jad",
       "title": "",
       "rating": 0,
@@ -346,27 +346,6 @@
       }
     },
     {
-      "seed_rank": 24,
-      "name": "El Khatib Younis",
-      "title": "",
-      "rating": 0,
-      "federation": "LBN",
-      "points": 2.0,
-      "final_rank": 22,
-      "rounds_played": 7,
-      "total_rounds": 7,
-      "completed": true,
-      "circuit_points": {
-        "placement": 15,
-        "performance_bonus": 4,
-        "participation": 5,
-        "total": 24,
-        "eligible": true,
-        "eligibility_reason": null,
-        "percentile_band": "Rest"
-      }
-    },
-    {
       "seed_rank": 19,
       "name": "Chaaban Mohamad Dib Nidal",
       "title": "",
@@ -374,6 +353,27 @@
       "federation": "LBN",
       "points": 3.0,
       "final_rank": 18,
+      "rounds_played": 7,
+      "total_rounds": 7,
+      "completed": true,
+      "circuit_points": {
+        "placement": 15,
+        "performance_bonus": 2,
+        "participation": 5,
+        "total": 22,
+        "eligible": true,
+        "eligibility_reason": null,
+        "percentile_band": "Rest"
+      }
+    },
+    {
+      "seed_rank": 23,
+      "name": "El Khatib Younis",
+      "title": "",
+      "rating": 0,
+      "federation": "LBN",
+      "points": 2.0,
+      "final_rank": 22,
       "rounds_played": 7,
       "total_rounds": 7,
       "completed": true,
@@ -535,5 +535,5 @@
       }
     }
   ],
-  "processed_at": "2026-02-08T17:58:40.614174"
+  "processed_at": "2026-07-13T01:47:37.763546"
 }
