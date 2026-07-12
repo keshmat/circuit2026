@@ -7,6 +7,10 @@
   # Directory to publish
   publish = "site"
 
+# Netlify Functions (registration confirmation email)
+[functions]
+  directory = "netlify/functions"
+
 # Headers for caching
 [[headers]]
   for = "/data/*"

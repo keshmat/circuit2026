@@ -48,3 +48,9 @@ wheels/
 
 # Netlify build artifacts
 site/data/
+
+# Netlify CLI link
+.netlify/
+
+# Node
+node_modules/

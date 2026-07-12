@@ -487,28 +487,6 @@
       "position": 17
     },
     {
-      "name": "Diab Majd",
-      "title": "",
-      "rating": 1689,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterClassicalC",
-          "event_type": "group_c",
-          "category": "classical",
-          "final_rank": 3,
-          "points": 79,
-          "counted": true
-        }
-      ],
-      "rapid_points": 0,
-      "classical_points": 79,
-      "total_points": 79,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 18
-    },
-    {
       "name": "Masri Ali Rida",
       "title": "",
       "rating": 1605,
@@ -536,6 +514,28 @@
       "total_points": 79,
       "events_counted": 2,
       "events_total": 2,
+      "position": 18
+    },
+    {
+      "name": "Diab Majd",
+      "title": "",
+      "rating": 1689,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalC",
+          "event_type": "group_c",
+          "category": "classical",
+          "final_rank": 3,
+          "points": 79,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 79,
+      "total_points": 79,
+      "events_counted": 1,
+      "events_total": 1,
       "position": 19
     },
     {
@@ -631,13 +631,13 @@
           "event_type": "group_c",
           "category": "classical",
           "final_rank": 19,
-          "points": 38,
+          "points": 37,
           "counted": true
         }
       ],
       "rapid_points": 27,
-      "classical_points": 38,
-      "total_points": 65,
+      "classical_points": 37,
+      "total_points": 64,
       "events_counted": 2,
       "events_total": 2,
       "position": 23
@@ -793,7 +793,7 @@
           "event_type": "rapid",
           "category": "rapid",
           "final_rank": 22,
-          "points": 24,
+          "points": 22,
           "counted": true
         },
         {
@@ -805,9 +805,9 @@
           "counted": true
         }
       ],
-      "rapid_points": 24,
+      "rapid_points": 22,
       "classical_points": 27,
-      "total_points": 51,
+      "total_points": 49,
       "events_counted": 2,
       "events_total": 2,
       "position": 30
@@ -865,28 +865,6 @@
       "position": 32
     },
     {
-      "name": "Farhat, Jawad",
-      "title": "",
-      "rating": 1886,
-      "federation": "LBN",
-      "events": [
-        {
-          "event_id": "winterClassicalB",
-          "event_type": "group_b",
-          "category": "classical",
-          "final_rank": 6,
-          "points": 42,
-          "counted": true
-        }
-      ],
-      "rapid_points": 0,
-      "classical_points": 42,
-      "total_points": 42,
-      "events_counted": 1,
-      "events_total": 1,
-      "position": 33
-    },
-    {
       "name": "Khoury Rabih",
       "title": "",
       "rating": 1629,
@@ -903,6 +881,28 @@
       ],
       "rapid_points": 42,
       "classical_points": 0,
+      "total_points": 42,
+      "events_counted": 1,
+      "events_total": 1,
+      "position": 33
+    },
+    {
+      "name": "Farhat, Jawad",
+      "title": "",
+      "rating": 1886,
+      "federation": "LBN",
+      "events": [
+        {
+          "event_id": "winterClassicalB",
+          "event_type": "group_b",
+          "category": "classical",
+          "final_rank": 6,
+          "points": 42,
+          "counted": true
+        }
+      ],
+      "rapid_points": 0,
+      "classical_points": 42,
       "total_points": 42,
       "events_counted": 1,
       "events_total": 1,
@@ -941,13 +941,13 @@
           "event_type": "group_c",
           "category": "classical",
           "final_rank": 21,
-          "points": 38,
+          "points": 33,
           "counted": true
         }
       ],
       "rapid_points": 0,
-      "classical_points": 38,
-      "total_points": 38,
+      "classical_points": 33,
+      "total_points": 33,
       "events_counted": 1,
       "events_total": 1,
       "position": 36
@@ -1213,21 +1213,21 @@
       "total_players": 6
     },
     {
-      "event_id": "winterClassicalC",
-      "event_type": "group_c",
-      "category": "classical",
-      "name": "Keshmat Winter Festival - Classic - Open -  2026",
-      "date": "",
-      "total_players": 30
-    },
-    {
       "event_id": "winterClassicalB",
       "event_type": "group_b",
       "category": "classical",
       "name": "Keshmat Winter Festival - Classic - 2026 - Group B",
       "date": "",
       "total_players": 6
+    },
+    {
+      "event_id": "winterClassicalC",
+      "event_type": "group_c",
+      "category": "classical",
+      "name": "Keshmat Winter Festival - Classic - Open -  2026",
+      "date": "",
+      "total_players": 30
     }
   ],
-  "updated_at": "2026-02-08T18:09:11.793985"
+  "updated_at": "2026-07-13T01:47:38.618072"
 }

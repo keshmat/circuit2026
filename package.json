@@ -1,0 +1,9 @@
+{
+  "name": "circuit2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Keshmat Chess Circuit 2026 site + registration functions",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}
