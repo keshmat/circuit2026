@@ -25,9 +25,12 @@ const I18N = {
         phPhone: "e.g. 70 123 456",
         labelEmail: "Email *",
         phEmail: "you@example.com",
-        labelHasFide: "I have a FIDE ID",
+        labelFideStatus: "FIDE registration *",
+        optHasFide: "I have a FIDE ID",
+        optNoFide: "I'm not FIDE-registered (new / unrated player)",
         labelFideSearch: "Search your FIDE name",
         phFide: "Type your name as it appears on FIDE",
+        fideHint: "Can't find your name? You may not be FIDE-registered — select \"I'm not FIDE-registered\" above.",
         clear: "Change",
         labelBirthday: "Date of birth *",
         birthdayHint: "Required for LCF registration",
@@ -76,9 +79,12 @@ const I18N = {
         phPhone: "مثال: 70 123 456",
         labelEmail: "البريد الإلكتروني *",
         phEmail: "you@example.com",
-        labelHasFide: "لديّ رقم FIDE",
+        labelFideStatus: "التسجيل في FIDE *",
+        optHasFide: "لديّ رقم FIDE",
+        optNoFide: "غير مسجّل(ة) في FIDE (لاعب(ة) جديد(ة) / غير مصنّف(ة))",
         labelFideSearch: "ابحث عن اسمك في FIDE",
         phFide: "اكتب اسمك كما يظهر في FIDE",
+        fideHint: "لا تجد اسمك؟ قد لا تكون مسجّلاً في FIDE — اختر «غير مسجّل(ة) في FIDE» أعلاه.",
         clear: "تغيير",
         labelBirthday: "تاريخ الولادة *",
         birthdayHint: "مطلوب لتسجيل الاتحاد اللبناني",
@@ -157,15 +163,19 @@ function applyLang(lang) {
 })();
 
 // ---------------------------------------------------------------------------
-// FIDE ID conditional block
+// FIDE status conditional block (default: has a FIDE ID)
 // ---------------------------------------------------------------------------
-const hasFide = document.getElementById("has-fide");
 const fideBlock = document.getElementById("fide-block");
 const birthdayBlock = document.getElementById("birthday-block");
 const birthdayInput = document.getElementById("birthday");
 
+function hasFideSelected() {
+    const checked = document.querySelector('input[name="fide_status"]:checked');
+    return !checked || checked.value === "has_fide";
+}
+
 function syncFideMode() {
-    const on = hasFide.checked;
+    const on = hasFideSelected();
     fideBlock.hidden = !on;
     birthdayBlock.hidden = on;
     if (on) {
@@ -174,7 +184,9 @@ function syncFideMode() {
         clearFideSelection();
     }
 }
-hasFide.addEventListener("change", syncFideMode);
+document.querySelectorAll('input[name="fide_status"]').forEach((el) =>
+    el.addEventListener("change", syncFideMode)
+);
 
 // ---------------------------------------------------------------------------
 // FIDE search (Datasette FTS API)
@@ -311,7 +323,7 @@ form.addEventListener("submit", (e) => {
         return showError(t("errNoTournament"));
     }
     // FIDE vs birthday
-    if (hasFide.checked) {
+    if (hasFideSelected()) {
         if (!document.getElementById("fide_id").value) return showError(t("errFideNotSelected"));
     } else {
         if (!birthdayInput.value) return showError(t("errBirthday"));

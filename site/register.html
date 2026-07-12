@@ -115,20 +115,28 @@
                         </div>
                     </div>
 
-                    <!-- FIDE ID -->
+                    <!-- FIDE status -->
                     <div class="form-control">
-                        <label class="label cursor-pointer justify-start gap-3">
-                            <input type="checkbox" id="has-fide" name="has_fide" value="yes" class="checkbox checkbox-primary" />
-                            <span class="label-text" data-i18n="labelHasFide">I have a FIDE ID</span>
-                        </label>
+                        <label class="label"><span class="label-text" data-i18n="labelFideStatus">FIDE registration *</span></label>
+                        <div class="flex flex-col gap-2">
+                            <label class="label cursor-pointer justify-start gap-3 border border-base-300 rounded-lg px-3">
+                                <input type="radio" name="fide_status" value="has_fide" class="radio radio-primary" checked />
+                                <span class="label-text" data-i18n="optHasFide">I have a FIDE ID</span>
+                            </label>
+                            <label class="label cursor-pointer justify-start gap-3 border border-base-300 rounded-lg px-3">
+                                <input type="radio" name="fide_status" value="no_fide" class="radio radio-primary" />
+                                <span class="label-text" data-i18n="optNoFide">I'm not FIDE-registered (new / unrated player)</span>
+                            </label>
+                        </div>
                     </div>
 
-                    <!-- FIDE search (shown when has-fide checked) -->
-                    <div id="fide-block" hidden class="relative">
+                    <!-- FIDE search (shown for has_fide, the default) -->
+                    <div id="fide-block" class="relative">
                         <label class="label"><span class="label-text" data-i18n="labelFideSearch">Search your FIDE name</span></label>
                         <input type="text" id="fide-search" autocomplete="off" class="input input-bordered w-full"
                                data-i18n-placeholder="phFide" placeholder="Type your name as it appears on FIDE" />
                         <ul id="fide-results" class="fide-results menu bg-base-200 rounded-box shadow-lg mt-1" hidden></ul>
+                        <p class="text-xs text-base-content/60 mt-1" data-i18n="fideHint">Can't find your name? You may not be FIDE-registered — select "I'm not FIDE-registered" above.</p>
 
                         <!-- Selected FIDE record -->
                         <div id="fide-selected" hidden class="alert alert-success mt-2 text-sm py-2">
@@ -145,8 +153,8 @@
                         <input type="hidden" name="fide_country" id="fide_country" />
                     </div>
 
-                    <!-- Birthday (shown when has-fide unchecked) -->
-                    <div id="birthday-block" class="form-control">
+                    <!-- Birthday (shown for no_fide) -->
+                    <div id="birthday-block" hidden class="form-control">
                         <label class="label">
                             <span class="label-text" data-i18n="labelBirthday">Date of birth *</span>
                             <span class="label-text-alt text-base-content/50" data-i18n="birthdayHint">Required for LCF registration</span>
