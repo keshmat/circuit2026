@@ -367,7 +367,7 @@ form.addEventListener("submit", (e) => {
         }
         const map = new maplibregl.Map({
             container: "venue-map",
-            style: "https://tiles.openfreemap.org/styles/liberty",
+            style: "https://tiles.openfreemap.org/styles/bright",
             center: [VENUE.lng, VENUE.lat],
             zoom: 11,
             cooperativeGestures: true,
