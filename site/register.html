@@ -6,6 +6,8 @@
     <title>Register — Keshmat Summer Circuit 2026</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
     <style>
         /* RTL tweaks for Arabic */
         html[dir="rtl"] body { font-family: "Segoe UI", Tahoma, sans-serif; }
@@ -50,6 +52,17 @@
     </div>
 
     <div class="container mx-auto px-4 py-8 max-w-3xl">
+
+        <!-- Venue minimap -->
+        <div class="card bg-base-100 shadow mb-8 overflow-hidden">
+            <div id="venue-map" dir="ltr" class="h-56 w-full"></div>
+            <div class="card-body p-4 flex-row flex-wrap items-center justify-between gap-2">
+                <span class="text-sm font-medium" data-i18n="venueName">Keshmat Chess Center — Dekweneh, Lebanon</span>
+                <a class="btn btn-sm btn-primary" target="_blank" rel="noopener"
+                   href="https://www.google.com/maps/dir/?api=1&destination=33.8663654,35.5468631"
+                   data-i18n="directions">Get directions</a>
+            </div>
+        </div>
 
         <!-- Tournament info -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -134,7 +147,7 @@
                     <div id="fide-block" class="relative">
                         <label class="label"><span class="label-text" data-i18n="labelFideSearch">Search your FIDE name</span></label>
                         <input type="text" id="fide-search" autocomplete="off" class="input input-bordered w-full"
-                               data-i18n-placeholder="phFide" placeholder="Type your name as it appears on FIDE" />
+                               data-i18n-placeholder="phFide" placeholder="Type your FIDE name or FIDE ID number" />
                         <ul id="fide-results" class="fide-results menu bg-base-200 rounded-box shadow-lg mt-1" hidden></ul>
                         <p class="text-xs text-base-content/60 mt-1" data-i18n="fideHint">Can't find your name? You may not be FIDE-registered — select "I'm not FIDE-registered" above.</p>
 
@@ -218,6 +231,6 @@
         <aside><p data-i18n="footer">Keshmat Chess Circuit 2026 - Dekweneh, Lebanon</p></aside>
     </footer>
 
-    <script src="js/register.js?v=1"></script>
+    <script src="js/register.js?v=2"></script>
 </body>
 </html>

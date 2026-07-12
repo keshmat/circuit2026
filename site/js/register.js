@@ -28,10 +28,12 @@ const I18N = {
         labelFideStatus: "FIDE registration *",
         optHasFide: "I have a FIDE ID",
         optNoFide: "I'm not FIDE-registered (new / unrated player)",
-        labelFideSearch: "Search your FIDE name",
-        phFide: "Type your name as it appears on FIDE",
-        fideHint: "Can't find your name? You may not be FIDE-registered — select \"I'm not FIDE-registered\" above.",
+        labelFideSearch: "Search your FIDE name or ID",
+        phFide: "Type your FIDE name or FIDE ID number",
+        fideHint: "Not sure of the spelling? Type your FIDE ID number instead. Can't find yourself? You may not be FIDE-registered — select \"I'm not FIDE-registered\" above.",
         clear: "Change",
+        venueName: "Keshmat Chess Center — Dekweneh, Lebanon",
+        directions: "Get directions",
         labelBirthday: "Date of birth *",
         birthdayHint: "Required for LCF registration",
         labelTournaments: "Which tournament(s)? *",
@@ -82,10 +84,12 @@ const I18N = {
         labelFideStatus: "التسجيل في FIDE *",
         optHasFide: "لديّ رقم FIDE",
         optNoFide: "غير مسجّل(ة) في FIDE (لاعب(ة) جديد(ة) / غير مصنّف(ة))",
-        labelFideSearch: "ابحث عن اسمك في FIDE",
-        phFide: "اكتب اسمك كما يظهر في FIDE",
-        fideHint: "لا تجد اسمك؟ قد لا تكون مسجّلاً في FIDE — اختر «غير مسجّل(ة) في FIDE» أعلاه.",
+        labelFideSearch: "ابحث عن اسمك أو رقمك في FIDE",
+        phFide: "اكتب اسمك في FIDE أو رقم FIDE الخاص بك",
+        fideHint: "لست متأكداً من كتابة الاسم؟ اكتب رقم FIDE الخاص بك. لا تجد نفسك؟ قد لا تكون مسجّلاً في FIDE — اختر «غير مسجّل(ة) في FIDE» أعلاه.",
         clear: "تغيير",
+        venueName: "مركز كش مات للشطرنج — الدكوانة، لبنان",
+        directions: "احصل على الاتجاهات",
         labelBirthday: "تاريخ الولادة *",
         birthdayHint: "مطلوب لتسجيل الاتحاد اللبناني",
         labelTournaments: "أي دورة/دورات؟ *",
@@ -209,7 +213,10 @@ function renderFideMessage(msg) {
 async function runFideSearch(q) {
     if (fideAbort) fideAbort.abort();
     fideAbort = new AbortController();
-    const url = `${FIDE_API}?_search=${encodeURIComponent(q)}&_shape=array&_size=8`;
+    // Numeric query = FIDE ID lookup; otherwise full-text name search
+    const url = /^\d{3,}$/.test(q)
+        ? `${FIDE_API}?fideid__exact=${encodeURIComponent(q)}&_shape=array&_size=8`
+        : `${FIDE_API}?_search=${encodeURIComponent(q)}&_shape=array&_size=8`;
     try {
         renderFideMessage(t("searching"));
         const res = await fetch(url, { signal: fideAbort.signal });
@@ -340,6 +347,30 @@ form.addEventListener("submit", (e) => {
     btn.classList.add("loading");
     form.submit();
 });
+
+// ---------------------------------------------------------------------------
+// Venue minimap (OpenFreeMap tiles via MapLibre GL)
+// ---------------------------------------------------------------------------
+(function initVenueMap() {
+    const VENUE = { lng: 35.5468631, lat: 33.8663654 };
+    const container = document.getElementById("venue-map");
+    if (!container || !window.maplibregl) return;
+    try {
+        const map = new maplibregl.Map({
+            container: "venue-map",
+            style: "https://tiles.openfreemap.org/styles/liberty",
+            center: [VENUE.lng, VENUE.lat],
+            zoom: 15,
+            cooperativeGestures: true,
+            attributionControl: { compact: true },
+        });
+        map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+        new maplibregl.Marker({ color: "#e11d48" }).setLngLat([VENUE.lng, VENUE.lat]).addTo(map);
+    } catch (e) {
+        // Map is decorative; the "Get directions" link still works without it.
+        console.warn("Venue map failed to load:", e);
+    }
+})();
 
 // ---------------------------------------------------------------------------
 // Language toggle + init
