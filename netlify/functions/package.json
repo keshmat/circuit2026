@@ -1,0 +1,9 @@
+{
+  "name": "circuit2026-functions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Netlify Functions for the Keshmat Circuit registration flow",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}
